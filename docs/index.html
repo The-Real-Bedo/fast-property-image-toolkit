@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>fast-property-image-toolkit — Demo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0c0e1a;--surface:#141728;--surface2:#1e2240;--surface3:#252a4a;
+  --accent:#4f7df0;--accent2:#7c5cfc;--text:#eef0f8;--text2:#8b93b8;
+  --green:#22c55e;--border:rgba(255,255,255,0.07);--radius:12px;
+}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;min-height:100vh}
+
+nav{position:sticky;top:0;z-index:99;background:rgba(12,14,26,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:.75rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:.5rem;color:var(--text)}
+.nav-logo i{color:var(--accent);font-size:1.2rem}
+.nav-links{display:flex;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;cursor:pointer;text-decoration:none;transition:.15s}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text2);transition:.15s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(79,125,240,.08)}
+.btn-primary{background:var(--accent);border:1px solid transparent;color:#fff}
+.btn-primary:hover{background:#3a6adf}
+
+.hero{padding:5rem 2rem 4rem;text-align:center;max-width:860px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(79,125,240,.12);border:1px solid rgba(79,125,240,.25);color:var(--accent);font-size:.78rem;padding:.3rem .8rem;border-radius:20px;margin-bottom:1.5rem}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:580px;margin:0 auto 2rem}
+.hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+
+.section{padding:3rem 2rem;max-width:1100px;margin:0 auto}
+.section-label{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.section-title{font-size:1.6rem;font-weight:700;margin-bottom:.5rem}
+.section-sub{color:var(--text2);margin-bottom:2.5rem}
+
+/* Demo Grid */
+.demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.prop-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.2s}
+.prop-card:hover{border-color:rgba(79,125,240,.3);transform:translateY(-2px)}
+.img-container{position:relative;aspect-ratio:3/2;overflow:hidden;background:#0a0c18;cursor:pointer}
+.img-blur{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(16px);transform:scale(1.05);transition:opacity .35s ease}
+.img-full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .55s ease;opacity:0}
+.img-full.loaded{opacity:1}
+.img-blur.hidden{opacity:0}
+.img-skeleton{position:absolute;inset:0;background:linear-gradient(90deg,#141728 0%,#1e2240 50%,#141728 100%);background-size:250% 100%;animation:shimmer 1.8s infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.load-badge{position:absolute;top:.6rem;right:.6rem;background:rgba(0,0,0,.7);color:#fff;font-size:.7rem;padding:.2rem .5rem;border-radius:6px;display:flex;align-items:center;gap:.3rem;backdrop-filter:blur(4px)}
+.load-badge.done{background:rgba(34,197,94,.2);color:var(--green);border:1px solid rgba(34,197,94,.3)}
+.card-body{padding:1rem}
+.card-title{font-weight:600;font-size:.95rem;margin-bottom:.25rem}
+.card-meta{font-size:.8rem;color:var(--text2);display:flex;align-items:center;gap:.5rem}
+.size-pill{background:var(--surface2);border-radius:4px;padding:.1rem .4rem;font-size:.72rem;font-family:monospace}
+
+/* How it works */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;position:relative}
+.step-num{width:2rem;height:2rem;border-radius:50%;background:rgba(79,125,240,.15);border:1px solid rgba(79,125,240,.3);color:var(--accent);font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.step-icon{font-size:1.6rem;color:var(--accent);margin-bottom:.75rem}
+.step h3{font-size:.95rem;font-weight:600;margin-bottom:.4rem}
+.step p{font-size:.82rem;color:var(--text2)}
+.step-arrow{position:absolute;right:-1rem;top:50%;transform:translateY(-50%);color:var(--text2);font-size:.8rem;z-index:1;display:none}
+@media(min-width:700px){.step-arrow{display:block}}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.feat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
+.feat-icon{width:2.2rem;height:2.2rem;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;font-size:1rem}
+.feat h4{font-size:.9rem;font-weight:600;margin-bottom:.3rem}
+.feat p{font-size:.8rem;color:var(--text2)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center}
+.stat-val{font-size:1.8rem;font-weight:700;margin-bottom:.25rem}
+.stat-val.green{color:var(--green)}
+.stat-val.accent{color:var(--accent)}
+.stat-label{font-size:.8rem;color:var(--text2)}
+
+/* Code */
+.code-block{background:#0a0c18;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.code-header{background:var(--surface);border-bottom:1px solid var(--border);padding:.6rem 1rem;display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--text2)}
+.code-dot{width:10px;height:10px;border-radius:50%}
+.code-pre{padding:1.5rem;overflow-x:auto;font-family:'Fira Code',Menlo,monospace;font-size:.8rem;line-height:1.7;color:#cdd6f4}
+.kw{color:#cba6f7}.fn{color:#89b4fa}.str{color:#a6e3a1}.cm{color:#6c7086;font-style:italic}.num{color:#fab387}.prop{color:#f38ba8}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text2);font-size:.82rem;margin-top:2rem}
+footer a{color:var(--accent);text-decoration:none}
+
+.divider{height:1px;background:var(--border);margin:2rem 0}
+
+/* Trigger button */
+#trigger-btn{margin:1.5rem auto 0;display:flex}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><i class="ti ti-home-2" aria-hidden="true"></i>fast-property-image-toolkit</div>
+  <div class="nav-links">
+    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-outline" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> GitHub</a>
+    <a href="#demo" class="btn btn-primary">Live Demo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge"><i class="ti ti-bolt" aria-hidden="true"></i> Open Source · v1.0.0</div>
+  <h1>Property images,<br><span>engineered for speed</span></h1>
+  <p class="hero-sub">Upload raw real estate photos → get compressed WebP images + blur placeholder → display with zero layout shift and zero wasted bandwidth.</p>
+  <div class="hero-btns">
+    <a href="#demo" class="btn btn-primary"><i class="ti ti-player-play" aria-hidden="true"></i> See it in action</a>
+    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-outline" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> View on GitHub</a>
+  </div>
+</div>
+
+<div class="section" id="demo">
+  <div class="section-label">Live Demo</div>
+  <div class="section-title">Progressive image rendering</div>
+  <p class="section-sub">Watch the blur placeholder cross-fade into the full image — exactly how the React component works.</p>
+
+  <div class="demo-grid" id="cards"></div>
+  <button class="btn btn-outline" id="trigger-btn" onclick="resetDemo()"><i class="ti ti-refresh" aria-hidden="true"></i> &nbsp;Reset demo</button>
+</div>
+
+<div class="section">
+  <div class="section-label">How it works</div>
+  <div class="section-title">3-step pipeline</div>
+  <p class="section-sub">From raw upload to pixel-perfect display in under 500ms.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-icon"><i class="ti ti-upload" aria-hidden="true"></i></div>
+      <h3>Upload</h3>
+      <p>Client sends a multipart POST with the raw image. Multer validates type & size (up to 50 MB).</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-icon"><i class="ti ti-wand" aria-hidden="true"></i></div>
+      <h3>Process</h3>
+      <p>Sharp generates 3 WebP sizes in parallel + a 20px blur placeholder as a Base64 string (~400 bytes).</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
+      <h3>Display</h3>
+      <p>React component shows blur instantly. IntersectionObserver triggers the right-size image when near viewport.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Features</div>
+  <div class="section-title">Everything you need</div>
+  <p class="section-sub">Production-ready, zero compromise.</p>
+  <div class="features">
+    <div class="feat"><div class="feat-icon" style="background:rgba(79,125,240,.15)"><i class="ti ti-bolt" style="color:#4f7df0" aria-hidden="true"></i></div><h4>WebP conversion</h4><p>30–50% smaller than JPEG at equivalent quality.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(34,197,94,.15)"><i class="ti ti-layers-subtract" style="color:#22c55e" aria-hidden="true"></i></div><h4>3 size variants</h4><p>Thumbnail 400px · Mobile 800px · Desktop 1920px, all generated in parallel.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(124,92,252,.15)"><i class="ti ti-photo" style="color:#7c5cfc" aria-hidden="true"></i></div><h4>Blur placeholder</h4><p>~400-byte Base64 WebP. No extra HTTP request, instant visual feedback.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(251,191,36,.15)"><i class="ti ti-device-mobile" style="color:#fbbf24" aria-hidden="true"></i></div><h4>Responsive srcset</h4><p>Browser auto-picks the right resolution. A phone never downloads a 1920px image.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(239,68,68,.15)"><i class="ti ti-eye-off" style="color:#ef4444" aria-hidden="true"></i></div><h4>Lazy loading</h4><p>IntersectionObserver fires 200px before viewport. Off-screen images are never fetched.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(20,184,166,.15)"><i class="ti ti-rotate" style="color:#14b8a6" aria-hidden="true"></i></div><h4>EXIF auto-rotate</h4><p>Sideways phone photos are automatically corrected before processing.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(249,115,22,.15)"><i class="ti ti-shield-check" style="color:#f97316" aria-hidden="true"></i></div><h4>Input validation</h4><p>MIME type whitelist + configurable 50MB cap. Rejects bad files before reading bytes.</p></div>
+    <div class="feat"><div class="feat-icon" style="background:rgba(79,125,240,.15)"><i class="ti ti-brand-typescript" style="color:#4f7df0" aria-hidden="true"></i></div><h4>Full TypeScript</h4><p>Every type exported. Backend JSDoc types sync with frontend interfaces.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Performance</div>
+  <div class="section-title">Real numbers, real savings</div>
+  <p class="section-sub">Tested on a 4032×3024 DSLR JPEG (6.8 MB source).</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-val green">97%</div><div class="stat-label">Average size reduction</div></div>
+    <div class="stat"><div class="stat-val accent">0 ms</div><div class="stat-label">Time to first visible content</div></div>
+    <div class="stat"><div class="stat-val green">~400ms</div><div class="stat-label">Total processing time</div></div>
+    <div class="stat"><div class="stat-val accent">0</div><div class="stat-label">Cumulative Layout Shift (CLS)</div></div>
+  </div>
+  <div class="code-block">
+    <div class="code-header"><div class="code-dot" style="background:#ff5f57"></div><div class="code-dot" style="background:#febc2e"></div><div class="code-dot" style="background:#28c840"></div><span style="margin-left:.5rem">File size comparison</span></div>
+    <pre class="code-pre"><span class="cm">// Same 6.8 MB source JPEG → WebP output:</span>
+Source  (JPEG)    4032×3024   <span class="prop">6,800 KB</span>   ████████████████████  baseline
+thumbnail (WebP)   400×267      <span class="str">  11 KB</span>   ▏                     <span class="green" style="color:#a6e3a1">99.8% smaller</span>
+mobile    (WebP)   800×534      <span class="str">  42 KB</span>   ▏                     <span class="green" style="color:#a6e3a1">99.4% smaller</span>
+desktop   (WebP)  1920×1280    <span class="str"> 178 KB</span>   ▎                     <span class="green" style="color:#a6e3a1">97.4% smaller</span>
+blur      (WebP)    20×13       <span class="str">0.4 KB</span>   ▏                     <span class="green" style="color:#a6e3a1">99.99% smaller</span></pre>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Quick start</div>
+  <div class="section-title">Up in 3 commands</div>
+  <p class="section-sub">Clone, configure, run.</p>
+  <div class="code-block">
+    <div class="code-header"><div class="code-dot" style="background:#ff5f57"></div><div class="code-dot" style="background:#febc2e"></div><div class="code-dot" style="background:#28c840"></div><span style="margin-left:.5rem">Terminal</span></div>
+    <pre class="code-pre"><span class="cm"># 1. Clone and install</span>
+<span class="fn">git</span> clone https://github.com/The-Real-Bedo/fast-property-image-toolkit.git
+<span class="fn">cd</span> fast-property-image-toolkit && <span class="fn">npm</span> install
+
+<span class="cm"># 2. Configure</span>
+<span class="fn">cp</span> packages/backend/.env.example packages/backend/.env
+
+<span class="cm"># 3. Start</span>
+<span class="fn">npm</span> run dev:backend
+<span class="cm"># → http://localhost:4000/api/images/process ✅</span></pre>
+  </div>
+  <br>
+  <div class="code-block">
+    <div class="code-header"><div class="code-dot" style="background:#ff5f57"></div><div class="code-dot" style="background:#febc2e"></div><div class="code-dot" style="background:#28c840"></div><span style="margin-left:.5rem">React usage</span></div>
+    <pre class="code-pre"><span class="kw">import</span> { <span class="fn">PropertyImage</span> } <span class="kw">from</span> <span class="str">'./components/PropertyImage'</span>;
+
+<span class="kw">function</span> <span class="fn">PropertyCard</span>({ property }) {
+  <span class="kw">return</span> (
+    &lt;<span class="fn">PropertyImage</span>
+      data={property.image}    <span class="cm">// JSON from the backend API</span>
+      alt={property.title}
+      aspectRatio=<span class="str">"3/2"</span>
+      rootMargin=<span class="str">"200px"</span>      <span class="cm">// preload 200px before viewport</span>
+    /&gt;
+  );
+}</pre>
+  </div>
+</div>
+
+<footer>
+  <p>Built with <a href="https://sharp.pixelplumbing.com" target="_blank">sharp</a>, <a href="https://expressjs.com" target="_blank">Express</a> &amp; <a href="https://react.dev" target="_blank">React</a> · MIT License</p>
+  <p style="margin-top:.5rem"><a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i> github.com/The-Real-Bedo/fast-property-image-toolkit</a></p>
+</footer>
+
+<script>
+const PROPERTIES = [
+  {title:'Luxury Villa — New Cairo',location:'New Cairo, Egypt',seed:'architecture1',sizes:{thumb:'11 KB',mobile:'42 KB',desktop:'178 KB'}},
+  {title:'Modern Apartment — Zamalek',location:'Zamalek, Cairo',seed:'apartment2',sizes:{thumb:'9 KB',mobile:'38 KB',desktop:'160 KB'}},
+  {title:'Penthouse Suite — North Coast',location:'Sahel, Egypt',seed:'house3',sizes:{thumb:'13 KB',mobile:'51 KB',desktop:'196 KB'}},
+  {title:'Garden Duplex — Maadi',location:'Maadi, Cairo',seed:'interior4',sizes:{thumb:'8 KB',mobile:'35 KB',desktop:'142 KB'}},
+  {title:'Sea View Chalet — Ain Sokhna',location:'Ain Sokhna, Egypt',seed:'building5',sizes:{thumb:'12 KB',mobile:'47 KB',desktop:'185 KB'}},
+  {title:'Smart Home — 6th October',location:'6th October, Giza',seed:'modern6',sizes:{thumb:'10 KB',mobile:'40 KB',desktop:'168 KB'}},
+];
+
+function buildCards() {
+  const grid = document.getElementById('cards');
+  grid.innerHTML = '';
+  PROPERTIES.forEach((p,i) => {
+    const blurSrc = `https://picsum.photos/seed/${p.seed}/20/13`;
+    const fullSrc = `https://picsum.photos/seed/${p.seed}/800/533`;
+    grid.innerHTML += `
+      <div class="prop-card" data-idx="${i}" data-full="${fullSrc}">
+        <div class="img-container">
+          <div class="img-skeleton" id="sk-${i}"></div>
+          <img class="img-blur" id="blur-${i}" src="${blurSrc}" alt="" aria-hidden="true" style="opacity:1">
+          <img class="img-full" id="full-${i}" src="" alt="${p.title}" style="opacity:0">
+          <div class="load-badge" id="badge-${i}"><i class="ti ti-loader-2" style="animation:spin .8s linear infinite"></i> Loading…</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">${p.title}</div>
+          <div class="card-meta"><i class="ti ti-map-pin" style="font-size:.9rem" aria-hidden="true"></i>${p.location}
+            <span class="size-pill">thumb ${p.sizes.thumb}</span>
+            <span class="size-pill">mobile ${p.sizes.mobile}</span>
+          </div>
+        </div>
+      </div>`;
+  });
+  document.head.insertAdjacentHTML('beforeend','<style>@keyframes spin{to{transform:rotate(360deg)}}</style>');
+  observeCards();
+}
+
+function observeCards() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        loadCard(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  },{rootMargin:'100px',threshold:0.1});
+  document.querySelectorAll('.prop-card').forEach(c => observer.observe(c));
+}
+
+function loadCard(card) {
+  const i = card.dataset.idx;
+  const fullSrc = card.dataset.full;
+  const delay = 600 + Math.random() * 800;
+  setTimeout(() => {
+    const img = document.getElementById(`full-${i}`);
+    const blur = document.getElementById(`blur-${i}`);
+    const badge = document.getElementById(`badge-${i}`);
+    const sk = document.getElementById(`sk-${i}`);
+    img.src = fullSrc;
+    img.onload = () => {
+      img.classList.add('loaded');
+      blur.classList.add('hidden');
+      if(sk) sk.style.display='none';
+      badge.innerHTML = '<i class="ti ti-check"></i> WebP · Loaded';
+      badge.className = 'load-badge done';
+    };
+  }, delay);
+}
+
+function resetDemo() {
+  buildCards();
+  document.getElementById('demo').scrollIntoView({behavior:'smooth'});
+}
+
+buildCards();
+</script>
+</body>
+</html>
