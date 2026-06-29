@@ -27,16 +27,14 @@ button{font-family:inherit;cursor:pointer}
 ::-webkit-scrollbar-track{background:var(--s1)}
 ::-webkit-scrollbar-thumb{background:var(--s3);border-radius:3px}
 
-nav{position:sticky;top:0;z-index:200;background:rgba(7,9,15,.9);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--bd);padding:.7rem 1.5rem;
-  display:flex;align-items:center;justify-content:space-between;gap:1rem}
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:rgba(7,9,15,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .logo{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem;white-space:nowrap}
 .logo i{color:var(--ac)}
 .nav-r{display:flex;align-items:center;gap:.6rem}
 
-.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem 1rem;
-  border-radius:9px;font-size:.82rem;font-weight:600;border:none;transition:.15s;white-space:nowrap;font-family:'Inter',sans-serif}
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem 1rem;border-radius:9px;font-size:.82rem;font-weight:600;border:none;transition:.15s;white-space:nowrap;font-family:'Inter',sans-serif}
 .btn:active{transform:scale(.97)}
 .btn-ghost{background:transparent;border:1px solid var(--bd2);color:var(--tx2)}
 .btn-ghost:hover{border-color:var(--ac);color:var(--ac);background:rgba(91,110,245,.08)}
@@ -47,131 +45,115 @@ nav{position:sticky;top:0;z-index:200;background:rgba(7,9,15,.9);
 .btn-lg{padding:.65rem 1.4rem;font-size:.9rem;border-radius:11px}
 .btn-sm{padding:.3rem .7rem;font-size:.75rem;border-radius:7px}
 
+/* ── HERO ── */
 .hero{text-align:center;padding:5rem 1.5rem 3.5rem;max-width:800px;margin:0 auto;position:relative}
-.hero::before{content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(91,110,245,.1),transparent);
-  pointer-events:none}
-.tag{display:inline-flex;align-items:center;gap:.4rem;
-  background:rgba(91,110,245,.1);border:1px solid rgba(91,110,245,.2);
-  color:var(--ac);font-size:.72rem;font-weight:600;padding:.25rem .75rem;border-radius:20px;margin-bottom:1.4rem}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(91,110,245,.1),transparent);pointer-events:none}
+.tag{display:inline-flex;align-items:center;gap:.4rem;background:rgba(91,110,245,.1);border:1px solid rgba(91,110,245,.2);color:var(--ac);font-size:.72rem;font-weight:600;padding:.25rem .75rem;border-radius:20px;margin-bottom:1.4rem}
 h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:1rem}
-h1 em{font-style:normal;background:linear-gradient(135deg,#7c8ff7,#a78bfa);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h1 em{font-style:normal;background:linear-gradient(135deg,#7c8ff7,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:1rem;color:var(--tx2);max-width:520px;margin:0 auto 2rem;line-height:1.65}
 .hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-.hero-note{margin-top:1.25rem;font-size:.78rem;color:var(--tx3);display:flex;align-items:center;justify-content:center;gap:.4rem}
+.hero-note{margin-top:1.1rem;font-size:.76rem;color:var(--tx3);display:flex;align-items:center;justify-content:center;gap:.4rem}
 .hs{display:flex;gap:2rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;padding-top:2.5rem;border-top:1px solid var(--bd)}
-.hs-item{text-align:center}
-.hs-val{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--ac),var(--ac2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hs-lbl{font-size:.72rem;color:var(--tx3)}
+.hsi{text-align:center}
+.hsv{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hsl{font-size:.71rem;color:var(--tx3)}
 
-.github-banner{background:rgba(91,110,245,.06);border-top:1px solid rgba(91,110,245,.15);
-  border-bottom:1px solid rgba(91,110,245,.15);padding:.9rem 1.5rem;
-  display:flex;align-items:center;justify-content:center;gap:.75rem;font-size:.85rem;color:var(--tx2);flex-wrap:wrap;text-align:center}
-.github-banner a{color:var(--ac);font-weight:600}
-.github-banner a:hover{text-decoration:underline}
+.gh-banner{background:rgba(91,110,245,.06);border-top:1px solid rgba(91,110,245,.14);border-bottom:1px solid rgba(91,110,245,.14);padding:.85rem 1.5rem;display:flex;align-items:center;justify-content:center;gap:.7rem;font-size:.83rem;color:var(--tx2);flex-wrap:wrap;text-align:center}
+.gh-banner a{color:var(--ac);font-weight:600}
+.gh-banner a:hover{text-decoration:underline}
 
+/* ── SECTIONS ── */
 .sec{padding:4rem 1.5rem;max-width:1080px;margin:0 auto}
 .sec-lbl{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:.35rem}
 .sec-h{font-size:1.5rem;font-weight:700;margin-bottom:.4rem;letter-spacing:-.02em}
-.sec-sub{color:var(--tx2);margin-bottom:2rem;font-size:.9rem;max-width:600px}
+.sec-sub{color:var(--tx2);margin-bottom:2rem;font-size:.9rem;max-width:620px}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--bd2),transparent)}
 
-.upload-zone{border:2px dashed rgba(91,110,245,.3);border-radius:var(--r);
-  padding:3rem 2rem;text-align:center;cursor:pointer;transition:.2s;background:rgba(91,110,245,.03)}
+/* ══════════════════════════════════════════════
+   UPLOAD — MULTIPLE FILES
+══════════════════════════════════════════════ */
+.upload-zone{border:2px dashed rgba(91,110,245,.3);border-radius:var(--r);padding:3rem 2rem;text-align:center;cursor:pointer;transition:.2s;background:rgba(91,110,245,.03)}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--ac);background:rgba(91,110,245,.07)}
-.uz-ico{width:52px;height:52px;border-radius:13px;background:rgba(91,110,245,.12);
-  border:1px solid rgba(91,110,245,.2);display:flex;align-items:center;
-  justify-content:center;margin:0 auto .9rem;font-size:1.3rem;color:var(--ac)}
+.uz-ico{width:52px;height:52px;border-radius:13px;background:rgba(91,110,245,.12);border:1px solid rgba(91,110,245,.2);display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;font-size:1.3rem;color:var(--ac)}
 .uz-h{font-weight:700;font-size:1rem;margin-bottom:.3rem}
 .uz-s{color:var(--tx2);font-size:.82rem}
 .fmts{display:flex;gap:.35rem;justify-content:center;margin-top:.65rem;flex-wrap:wrap}
 .fmt{background:var(--s3);border-radius:5px;padding:.12rem .4rem;font-size:.68rem;font-family:'Fira Code',monospace;color:var(--tx2)}
 #fileInput{display:none}
 
-.up-proc{display:none;padding:1.5rem;text-align:center}
-.up-proc.show{display:block}
-.proc-list{display:flex;flex-direction:column;gap:.45rem;max-width:360px;margin:1.25rem auto 0}
-.cl{display:flex;align-items:center;gap:.65rem;padding:.55rem .85rem;
-  background:var(--s2);border:1px solid var(--bd);border-radius:9px;font-size:.82rem;opacity:.35;transition:.25s}
-.cl.act{opacity:1;border-color:rgba(91,110,245,.4);background:rgba(91,110,245,.07)}
-.cl.done{opacity:1;border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.05);color:var(--green)}
-.cl i{width:16px;text-align:center;flex-shrink:0}
+.queue{display:flex;flex-direction:column;gap:.4rem;margin-top:1.25rem;max-width:440px;margin-left:auto;margin-right:auto}
+.qi{display:flex;align-items:center;gap:.6rem;background:var(--s2);border:1px solid var(--bd);border-radius:9px;padding:.55rem .85rem;font-size:.8rem}
+.qi i{width:16px;text-align:center;flex-shrink:0}
+.qi-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--tx2)}
+.qi.act .qi-name{color:var(--tx)}
+.qi.done .qi-name{color:var(--green)}
+.qi-sz{font-size:.72rem;font-family:'Fira Code',monospace;color:var(--tx3);flex-shrink:0}
 
-.up-result{display:none}
-.up-result.show{display:block}
-.rg{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem}
-@media(max-width:580px){.rg{grid-template-columns:1fr}}
-.rc{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden}
-.rc-h{padding:.6rem .9rem;border-bottom:1px solid var(--bd);font-size:.76rem;font-weight:600;display:flex;align-items:center;gap:.35rem;color:var(--tx2)}
-.rc-b{padding:.9rem}
+.up-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
+.up-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;position:relative}
+.up-card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#04060d;cursor:pointer}
+.ubl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(16px);transform:scale(1.08);transition:opacity .4s ease}
+.ufl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .65s ease}
+.ufl.on{opacity:1}
+.ubl.off{opacity:0}
+.up-replay{position:absolute;bottom:.5rem;right:.5rem;background:rgba(0,0,0,.7);color:#fff;font-size:.68rem;padding:.2rem .5rem;border-radius:5px;cursor:pointer;backdrop-filter:blur(6px);z-index:2;display:flex;align-items:center;gap:.3rem;border:none}
+.up-replay:hover{background:rgba(91,110,245,.85)}
+.up-card-body{padding:.75rem}
+.up-fn{font-weight:600;font-size:.82rem;margin-bottom:.3rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.up-bars{display:flex;flex-direction:column;gap:.28rem;margin-bottom:.4rem}
+.up-br{display:flex;align-items:center;gap:.4rem;font-size:.7rem}
+.up-bl2{font-size:.68rem;color:var(--tx2);width:56px;flex-shrink:0}
+.up-bg{flex:1;background:rgba(255,255,255,.05);border-radius:3px;height:5px;overflow:hidden}
+.up-bf{height:100%;border-radius:3px;width:0;transition:width 1s ease}
+.up-bv{font-family:'Fira Code',monospace;font-size:.67rem;font-weight:600;width:48px;text-align:right;flex-shrink:0}
+.up-save{font-size:.7rem;color:var(--green);font-weight:600;display:flex;align-items:center;gap:.3rem}
+.up-rm{position:absolute;top:.45rem;right:.45rem;width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,.6);border:none;color:rgba(255,255,255,.6);font-size:.65rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s;z-index:3}
+.up-rm:hover{background:var(--red);color:#fff}
+.up-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.25rem}
 
-.blur-wrap{position:relative;aspect-ratio:4/3;border-radius:9px;overflow:hidden;cursor:pointer;background:#04060d;margin-bottom:.65rem}
-.bl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(16px);transform:scale(1.08);transition:opacity .4s ease}
-.fl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .65s ease}
-.fl.on{opacity:1}
-.bl.off{opacity:0}
-.bh{position:absolute;bottom:.5rem;left:50%;transform:translateX(-50%);
-  background:rgba(0,0,0,.72);color:#fff;font-size:.7rem;padding:.22rem .55rem;
-  border-radius:5px;backdrop-filter:blur(4px);white-space:nowrap}
-
-.sbars{display:flex;flex-direction:column;gap:.55rem}
-.sr{display:flex;align-items:center;gap:.55rem;font-size:.77rem}
-.sl{width:68px;flex-shrink:0;color:var(--tx2);font-size:.72rem}
-.sb{flex:1;background:rgba(255,255,255,.05);border-radius:3px;height:7px;overflow:hidden}
-.sf{height:100%;border-radius:3px;width:0;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
-.sv{width:60px;text-align:right;font-weight:600;font-size:.72rem;font-family:'Fira Code',monospace;flex-shrink:0}
-.save-tag{display:inline-flex;align-items:center;gap:.3rem;
-  background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.22);
-  color:var(--green);font-size:.72rem;padding:.2rem .5rem;border-radius:5px;margin-top:.55rem;font-weight:600}
-
-.jbox{background:#04060d;border:1px solid var(--bd);border-radius:8px;padding:.85rem;
-  font-family:'Fira Code',monospace;font-size:.71rem;line-height:1.75;overflow-x:auto;max-height:190px;color:#cdd6f4}
-.jk{color:#89b4fa}.js{color:#a6e3a1}.jn{color:#fab387}
-
+/* ══════════════════════════════════════════════
+   COMPARISON SLIDER
+══════════════════════════════════════════════ */
 .cmp-outer{border-radius:var(--r);overflow:hidden;box-shadow:0 0 0 1px var(--bd),0 20px 60px rgba(0,0,0,.5)}
 .cmp-wrap{aspect-ratio:16/9;position:relative;cursor:ew-resize;user-select:none;background:#04060d}
 .ci-base{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ci-top{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  filter:blur(18px);transform:scale(1.07);clip-path:inset(0 50% 0 0)}
-.ch{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);
-  width:2px;background:linear-gradient(to bottom,transparent,var(--ac),transparent);z-index:5;pointer-events:none}
-.ck{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:42px;height:42px;border-radius:50%;background:#fff;
-  display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px rgba(0,0,0,.5);color:#1a1d35;font-size:.8rem;gap:1px;pointer-events:all}
+.ci-top{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(18px);transform:scale(1.07);clip-path:inset(0 50% 0 0)}
+.ch{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:2px;background:linear-gradient(to bottom,transparent,var(--ac),transparent);z-index:5;pointer-events:none}
+.ck{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px rgba(0,0,0,.5);color:#1a1d35;font-size:.8rem;gap:1px;pointer-events:all}
 .ct{position:absolute;top:.7rem;padding:.28rem .65rem;border-radius:6px;font-size:.72rem;font-weight:700;z-index:10;backdrop-filter:blur(8px)}
 .ct.l{left:.7rem;background:rgba(239,68,68,.85);color:#fff}
 .ct.r{right:.7rem;background:rgba(34,197,94,.85);color:#fff}
 .cmp-hint{text-align:center;font-size:.78rem;color:var(--tx3);margin-top:.6rem}
 
+/* ══════════════════════════════════════════════
+   PIPELINE
+══════════════════════════════════════════════ */
 .pl-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 @media(max-width:640px){.pl-grid{grid-template-columns:1fr}}
 .psteps{display:flex;flex-direction:column;gap:.5rem}
-.ps{background:var(--s2);border:1px solid var(--bd);border-radius:10px;
-  padding:.8rem .95rem;display:flex;align-items:center;gap:.7rem;transition:.25s;opacity:.3}
+.ps{background:var(--s2);border:1px solid var(--bd);border-radius:10px;padding:.8rem .95rem;display:flex;align-items:center;gap:.7rem;transition:.25s;opacity:.3}
 .ps.act{opacity:1;border-color:rgba(91,110,245,.4);background:rgba(91,110,245,.06)}
 .ps.done{opacity:1;border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.04)}
 .pi{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
 .pt strong{font-size:.82rem;display:block;line-height:1.3}
 .pt span{font-size:.72rem;color:var(--tx2)}
-.pck{margin-left:auto;width:20px;height:20px;border-radius:50%;background:rgba(34,197,94,.1);
-  border:1.5px solid rgba(34,197,94,.3);color:var(--green);display:flex;align-items:center;
-  justify-content:center;font-size:.7rem;opacity:0;transition:.25s;flex-shrink:0}
+.pck{margin-left:auto;width:20px;height:20px;border-radius:50%;background:rgba(34,197,94,.1);border:1.5px solid rgba(34,197,94,.3);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:.7rem;opacity:0;transition:.25s;flex-shrink:0}
 .ps.done .pck{opacity:1}
-.pout{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);
-  padding:1.2rem;min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.5rem;color:var(--tx3);font-size:.85rem;text-align:center}
-.pout i{font-size:2rem;margin-bottom:.4rem;display:block;opacity:.2}
+.pout{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:1.2rem;min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.5rem;color:var(--tx3);font-size:.85rem;text-align:center}
+.pout i.big{font-size:2rem;margin-bottom:.4rem;display:block;opacity:.2}
 .pout.live{align-items:stretch;justify-content:flex-start;gap:.7rem}
 .po-lbl{font-size:.67rem;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em}
-.po-url{font-size:.71rem;font-family:'Fira Code',monospace;color:var(--ac);
-  background:rgba(91,110,245,.06);border-radius:5px;padding:.25rem .5rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.po-url{font-size:.71rem;font-family:'Fira Code',monospace;color:var(--ac);background:rgba(91,110,245,.06);border-radius:5px;padding:.25rem .5rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .po-bars{display:flex;flex-direction:column;gap:.32rem}
 .po-r{display:flex;align-items:center;gap:.5rem;font-size:.74rem}
 .po-bg{flex:1;background:rgba(255,255,255,.05);border-radius:3px;height:5px;overflow:hidden}
 .po-f{height:100%;border-radius:3px;width:0;transition:width 1s ease}
 .po-v{width:52px;text-align:right;font-weight:600;font-size:.71rem;font-family:'Fira Code',monospace;flex-shrink:0}
 
+/* ══════════════════════════════════════════════
+   RACE
+══════════════════════════════════════════════ */
 .race-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:1.1rem}
 .rrow{display:flex;flex-direction:column;gap:.45rem}
 .rmeta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.4rem}
@@ -186,35 +168,74 @@ h1 em{font-style:normal;background:linear-gradient(135deg,#7c8ff7,#a78bfa);
 .rldot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
 .rbtns{display:flex;gap:.55rem;flex-wrap:wrap}
 
+/* ══════════════════════════════════════════════
+   GALLERY
+══════════════════════════════════════════════ */
+.gal-toolbar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.gal-counter{font-size:.8rem;color:var(--tx2);display:flex;align-items:center;gap:.4rem}
+.gal-counter span{font-weight:700;color:var(--ac)}
 .g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+
 .g-card{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:.2s;position:relative}
 .g-card:hover{border-color:rgba(91,110,245,.3);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.4)}
-.g-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#04060d}
+.g-img{position:relative;overflow:hidden;background:#04060d}
+.g-img{aspect-ratio:4/3}
 .g-blur{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(16px);transform:scale(1.07);transition:opacity .45s}
-.g-full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s}
+.g-full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s;cursor:zoom-in}
 .g-full.on{opacity:1}
 .g-blur.off{opacity:0}
 .g-sk{position:absolute;inset:0;background:linear-gradient(90deg,#0d0f1e 0%,#1a1e35 50%,#0d0f1e 100%);background-size:250% 100%;animation:sk 2s infinite}
 @keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.g-load-btn{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:.5rem;background:rgba(0,0,0,.45);cursor:pointer;
-  transition:background .2s;z-index:3}
-.g-load-btn:hover{background:rgba(0,0,0,.55)}
-.g-play{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);
-  display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#131627;transition:.15s}
-.g-card:hover .g-play{transform:scale(1.07)}
-.g-load-lbl{font-size:.74rem;color:rgba(255,255,255,.85);font-weight:600}
-.g-badge{position:absolute;top:.5rem;right:.5rem;background:rgba(0,0,0,.75);color:#fff;
-  font-size:.67rem;padding:.2rem .48rem;border-radius:5px;display:flex;align-items:center;
-  gap:.28rem;backdrop-filter:blur(6px);z-index:4;pointer-events:none}
+
+.g-load-btn{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(7,9,15,.95) 0%,rgba(7,9,15,.7) 60%,transparent 100%);padding:.85rem .9rem .7rem;display:flex;align-items:center;gap:.6rem;cursor:pointer;transition:.2s;z-index:3}
+.g-card:hover .g-load-btn{background:linear-gradient(to top,rgba(91,110,245,.9) 0%,rgba(91,110,245,.6) 60%,transparent 100%)}
+.g-play{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.85rem;color:#131627;transition:.15s}
+.g-card:hover .g-play{transform:scale(1.1);box-shadow:0 0 0 4px rgba(255,255,255,.2)}
+.g-load-txt{font-size:.78rem;font-weight:600;color:#fff;line-height:1.3}
+.g-load-sub{font-size:.68rem;color:rgba(255,255,255,.6)}
+.g-badge{position:absolute;top:.5rem;right:.5rem;background:rgba(0,0,0,.75);color:#fff;font-size:.67rem;padding:.2rem .48rem;border-radius:5px;display:flex;align-items:center;gap:.28rem;backdrop-filter:blur(6px);z-index:4;pointer-events:none;transition:.2s}
 .g-badge.ok{background:rgba(34,197,94,.2);color:var(--green);border:1px solid rgba(34,197,94,.3)}
+.g-badge.ok{cursor:pointer;pointer-events:all}
+
 .g-body{padding:.8rem .9rem}
 .g-title{font-weight:600;font-size:.86rem;margin-bottom:.15rem}
-.g-meta{font-size:.73rem;color:var(--tx2);display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-bottom:.35rem}
-.g-price{font-size:.82rem;font-weight:700;color:var(--ac)}
-.g-tags{display:flex;gap:.3rem;flex-wrap:wrap}
+.g-meta{font-size:.73rem;color:var(--tx2);display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-bottom:.3rem}
+.g-price{font-size:.84rem;font-weight:700;color:var(--ac)}
+.g-tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.3rem}
 .g-tag{background:rgba(255,255,255,.05);border-radius:4px;padding:.1rem .35rem;font-size:.67rem;font-family:'Fira Code',monospace;color:var(--tx2)}
 
+/* ══════════════════════════════════════════════
+   LIGHTBOX
+══════════════════════════════════════════════ */
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .25s;padding:1rem;backdrop-filter:blur(8px)}
+#lightbox.open{opacity:1;pointer-events:all}
+#lightbox img{max-width:90vw;max-height:78vh;object-fit:contain;border-radius:10px;
+  box-shadow:0 25px 80px rgba(0,0,0,.8);transform:scale(.95);transition:transform .25s}
+#lightbox.open img{transform:scale(1)}
+.lb-caption{margin-top:1.1rem;text-align:center}
+.lb-caption h3{font-size:1rem;font-weight:700;margin-bottom:.2rem}
+.lb-caption p{font-size:.8rem;color:var(--tx2);display:flex;align-items:center;gap:.5rem;justify-content:center;flex-wrap:wrap}
+.lb-close{position:absolute;top:1.25rem;right:1.25rem;width:40px;height:40px;
+  border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:.15s;z-index:10}
+.lb-close:hover{background:rgba(239,68,68,.8)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;
+  border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:.15s}
+.lb-nav:hover{background:rgba(91,110,245,.7)}
+#lb-prev{left:1.25rem}
+#lb-next{right:1.25rem}
+.lb-dots{display:flex;gap:.4rem;margin-top:.9rem;justify-content:center}
+.lb-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:.15s}
+.lb-dot.on{background:var(--ac);transform:scale(1.2)}
+
+/* ══════════════════════════════════════════════
+   FEATURES
+══════════════════════════════════════════════ */
 .feats{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:.8rem}
 .feat{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:1.1rem;transition:.18s}
 .feat:hover{border-color:rgba(91,110,245,.2);transform:translateY(-1px)}
@@ -222,21 +243,23 @@ h1 em{font-style:normal;background:linear-gradient(135deg,#7c8ff7,#a78bfa);
 .feat h4{font-size:.84rem;font-weight:600;margin-bottom:.2rem}
 .feat p{font-size:.76rem;color:var(--tx2);line-height:1.5}
 
+/* ══════════════════════════════════════════════
+   CODE
+══════════════════════════════════════════════ */
 .cw{background:#04060d;border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin-bottom:.9rem}
 .ch2{background:var(--s1);border-bottom:1px solid var(--bd);padding:.5rem .9rem;display:flex;align-items:center;gap:.4rem;font-size:.74rem;color:var(--tx2)}
 .dot{width:8px;height:8px;border-radius:50%}
 pre{padding:1.1rem 1.3rem;overflow-x:auto;font-family:'Fira Code',monospace;font-size:.77rem;line-height:1.8;color:#cdd6f4}
 .kw{color:#cba6f7}.fn{color:#89b4fa}.st{color:#a6e3a1}.cm{color:#45475a;font-style:italic}
 
-.bottom-cta{background:linear-gradient(135deg,rgba(91,110,245,.1),rgba(139,92,246,.08));
-  border:1px solid rgba(91,110,245,.2);border-radius:var(--r);padding:2.5rem;text-align:center;margin-top:2rem}
+.bottom-cta{background:linear-gradient(135deg,rgba(91,110,245,.1),rgba(139,92,246,.07));border:1px solid rgba(91,110,245,.2);border-radius:var(--r);padding:2.5rem;text-align:center;margin-top:2rem}
 .bottom-cta h2{font-size:1.4rem;font-weight:700;margin-bottom:.5rem}
 .bottom-cta p{color:var(--tx2);font-size:.9rem;margin-bottom:1.5rem}
-.bottom-cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.bca-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
 footer{border-top:1px solid var(--bd);padding:2rem 1.5rem;text-align:center;color:var(--tx3);font-size:.78rem;background:var(--s1)}
 footer a{color:var(--ac)}
-.fl2{display:flex;gap:1.5rem;justify-content:center;margin-bottom:.65rem;flex-wrap:wrap}
+.fl{display:flex;gap:1.5rem;justify-content:center;margin-bottom:.65rem;flex-wrap:wrap}
 
 @keyframes spin{to{transform:rotate(360deg)}}
 .spin{animation:spin .8s linear infinite;display:inline-block}
@@ -244,135 +267,106 @@ footer a{color:var(--ac)}
 </head>
 <body>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="handleLbClick(event)">
+  <button class="lb-close" onclick="closeLb()"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-nav" id="lb-prev" onclick="lbStep(-1);event.stopPropagation()"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="lb-nav" id="lb-next" onclick="lbStep(1);event.stopPropagation()"><i class="fa-solid fa-chevron-right"></i></button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-caption">
+    <h3 id="lb-title"></h3>
+    <p id="lb-meta"></p>
+  </div>
+  <div class="lb-dots" id="lb-dots"></div>
+</div>
+
+<!-- NAV -->
 <nav>
   <div class="logo"><i class="fa-solid fa-house"></i> fast-property-image-toolkit</div>
   <div class="nav-r">
-    <span style="font-size:.72rem;color:var(--tx3);display:none" id="navDemo">This is a demo only</span>
-    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-ghost" target="_blank">
-      <i class="fa-brands fa-github"></i> View Source
-    </a>
+    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-ghost" target="_blank"><i class="fa-brands fa-github"></i> Source Code</a>
     <a href="#upload" class="btn btn-prim"><i class="fa-solid fa-wand-magic-sparkles"></i> Try Demo</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="tag"><i class="fa-solid fa-bolt"></i> Open Source Demo · v1.0.0 · MIT License</div>
+  <div class="tag"><i class="fa-solid fa-bolt"></i> Open Source Demo · v1.0.0 · MIT</div>
   <h1>Real estate images,<br><em>fast & beautiful</em></h1>
-  <p class="hero-sub">Upload any property photo → compress to WebP + generate blur placeholder → display with smooth fade-in. This is an interactive demo — the full source code is on GitHub.</p>
+  <p class="hero-sub">Upload property photos → compress to WebP + blur placeholder → display with smooth fade-in. Interactive demo — full source on GitHub.</p>
   <div class="hero-btns">
-    <a href="#upload" class="btn btn-prim btn-lg"><i class="fa-solid fa-wand-magic-sparkles"></i> Try with your photo</a>
-    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-ghost btn-lg" target="_blank">
-      <i class="fa-brands fa-github"></i> Get the source code
-    </a>
+    <a href="#upload" class="btn btn-prim btn-lg"><i class="fa-solid fa-wand-magic-sparkles"></i> Try with your photos</a>
+    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-ghost btn-lg" target="_blank"><i class="fa-brands fa-github"></i> Get source code</a>
   </div>
-  <p class="hero-note"><i class="fa-solid fa-lock"></i> Your photos never leave your browser — this demo runs entirely client-side</p>
+  <p class="hero-note"><i class="fa-solid fa-lock"></i> Photos never leave your browser — all processing is client-side</p>
   <div class="hs">
-    <div class="hs-item"><div class="hs-val">97%</div><div class="hs-lbl">Smaller files</div></div>
-    <div class="hs-item"><div class="hs-val">0 ms</div><div class="hs-lbl">First visible</div></div>
-    <div class="hs-item"><div class="hs-val">~400ms</div><div class="hs-lbl">Server processing</div></div>
-    <div class="hs-item"><div class="hs-val">Zero</div><div class="hs-lbl">Layout shift</div></div>
+    <div class="hsi"><div class="hsv">97%</div><div class="hsl">Smaller files</div></div>
+    <div class="hsi"><div class="hsv">0 ms</div><div class="hsl">First visible</div></div>
+    <div class="hsi"><div class="hsv">~400ms</div><div class="hsl">Processing time</div></div>
+    <div class="hsi"><div class="hsv">Zero</div><div class="hsl">Layout shift</div></div>
   </div>
 </div>
 
-<div class="github-banner">
-  <i class="fa-brands fa-github" style="color:var(--ac);font-size:1rem"></i>
-  <span>This page is a <strong>demo only</strong>. For the full Node.js + React source code, documentation, and installation guide →</span>
+<div class="gh-banner">
+  <i class="fa-brands fa-github" style="color:var(--ac)"></i>
+  <span>This is a <strong>demo only</strong>. Full Node.js + React source code →</span>
   <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank">github.com/The-Real-Bedo/fast-property-image-toolkit</a>
 </div>
 <div class="divider"></div>
 
-<!-- UPLOAD -->
+<!-- ══ UPLOAD ══ -->
 <div class="sec" id="upload">
-  <div class="sec-lbl"><i class="fa-solid fa-upload"></i> Demo 1 of 4 — Upload your own photo</div>
-  <div class="sec-h">Try it with your own property image</div>
-  <p class="sec-sub">Drop any photo below. We'll simulate the full pipeline in your browser and show you the blur placeholder, size savings, and fade-in effect using your real image.</p>
+  <div class="sec-lbl"><i class="fa-solid fa-upload"></i> Demo 1 — Upload your photos</div>
+  <div class="sec-h">Try it with your own property images</div>
+  <p class="sec-sub">Select one or multiple property photos. We'll simulate the full pipeline — blur placeholder, WebP compression, and size savings — right in your browser.</p>
 
-  <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/avif">
+  <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/avif" multiple>
 
   <div class="upload-zone" id="uploadZone">
     <div class="uz-ico"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-    <div class="uz-h">Drop a property photo here</div>
-    <div class="uz-s">or click to browse — max 50 MB</div>
-    <div class="fmts"><span class="fmt">JPEG</span><span class="fmt">PNG</span><span class="fmt">WebP</span><span class="fmt">AVIF</span></div>
+    <div class="uz-h">Drop property photos here</div>
+    <div class="uz-s">or click to browse — select <strong>multiple files</strong> at once — max 50 MB each</div>
+    <div class="fmts"><span class="fmt">JPEG</span><span class="fmt">PNG</span><span class="fmt">WebP</span><span class="fmt">AVIF</span><span class="fmt">multiple files</span></div>
   </div>
 
-  <div class="up-proc" id="upProc">
-    <i class="fa-solid fa-gear spin" style="font-size:1.6rem;color:var(--ac)"></i>
-    <p style="margin-top:.65rem;font-weight:600;font-size:.88rem">Processing your image…</p>
-    <div class="proc-list">
-      <div class="cl" id="cl0"><i class="fa-solid fa-file-image"></i> Reading image file</div>
-      <div class="cl" id="cl1"><i class="fa-solid fa-circle-info"></i> Extracting metadata</div>
-      <div class="cl" id="cl2"><i class="fa-solid fa-eye-slash"></i> Generating blur placeholder</div>
-      <div class="cl" id="cl3"><i class="fa-solid fa-image"></i> Creating thumbnail (400px)</div>
-      <div class="cl" id="cl4"><i class="fa-solid fa-mobile-screen"></i> Creating mobile (800px)</div>
-      <div class="cl" id="cl5"><i class="fa-solid fa-desktop"></i> Creating desktop (1920px)</div>
-    </div>
+  <div id="queueWrap" style="display:none">
+    <div class="queue" id="queue"></div>
   </div>
 
-  <div class="up-result" id="upResult">
-    <div class="rg">
-      <div class="rc">
-        <div class="rc-h"><i class="fa-solid fa-eye" style="color:var(--ac)"></i> Progressive rendering — click to replay</div>
-        <div class="rc-b">
-          <div class="blur-wrap" id="blurWrap" onclick="replayBlur()">
-            <img class="bl" id="upBlur" src="" alt="">
-            <img class="fl" id="upFull" src="" alt="">
-            <span class="bh" id="upHint"><i class="fa-solid fa-hand-pointer"></i> Click to replay</span>
-          </div>
-          <div style="font-size:.72rem;color:var(--tx2);margin-top:.4rem" id="upMeta"></div>
-        </div>
-      </div>
-      <div class="rc">
-        <div class="rc-h"><i class="fa-solid fa-chart-bar" style="color:var(--green)"></i> File size comparison</div>
-        <div class="rc-b">
-          <div class="sbars">
-            <div class="sr"><span class="sl">Original</span><div class="sb"><div class="sf" id="b-or" style="background:var(--red)"></div></div><span class="sv" id="v-or" style="color:var(--red)">—</span></div>
-            <div class="sr"><span class="sl">Blur (B64)</span><div class="sb"><div class="sf" id="b-bl" style="background:#8b5cf6"></div></div><span class="sv" id="v-bl" style="color:#a78bfa">~0.4 KB</span></div>
-            <div class="sr"><span class="sl">Thumbnail</span><div class="sb"><div class="sf" id="b-th" style="background:var(--cyan)"></div></div><span class="sv" id="v-th" style="color:var(--cyan)">—</span></div>
-            <div class="sr"><span class="sl">Mobile</span><div class="sb"><div class="sf" id="b-mo" style="background:var(--ac)"></div></div><span class="sv" id="v-mo" style="color:var(--ac)">—</span></div>
-            <div class="sr"><span class="sl">Desktop</span><div class="sb"><div class="sf" id="b-de" style="background:var(--green)"></div></div><span class="sv" id="v-de" style="color:var(--green)">—</span></div>
-          </div>
-          <div class="save-tag" id="saveTag" style="display:none"><i class="fa-solid fa-circle-check"></i> <span id="saveText"></span></div>
-        </div>
-      </div>
-    </div>
-    <div class="rc" style="margin-bottom:.75rem">
-      <div class="rc-h"><i class="fa-solid fa-code" style="color:var(--amber)"></i> API response — what the backend returns to your React app</div>
-      <div class="rc-b"><div class="jbox" id="jbox"></div></div>
-    </div>
-    <div style="display:flex;gap:.6rem;flex-wrap:wrap;align-items:center">
-      <button class="btn btn-ghost btn-sm" onclick="resetUpload()"><i class="fa-solid fa-rotate-left"></i> Upload another</button>
-      <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" class="btn btn-green btn-sm"><i class="fa-brands fa-github"></i> Get the source code</a>
-    </div>
+  <div class="up-grid" id="upGrid"></div>
+
+  <div class="up-actions" id="upActions" style="display:none">
+    <button class="btn btn-ghost btn-sm" onclick="resetUpload()"><i class="fa-solid fa-rotate-left"></i> Upload more</button>
+    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" class="btn btn-green btn-sm"><i class="fa-brands fa-github"></i> Get the source code</a>
   </div>
 </div>
 <div class="divider"></div>
 
-<!-- SLIDER -->
+<!-- ══ SLIDER ══ -->
 <div class="sec" id="slider">
-  <div class="sec-lbl"><i class="fa-solid fa-left-right"></i> Demo 2 of 4 — Comparison slider</div>
+  <div class="sec-lbl"><i class="fa-solid fa-left-right"></i> Demo 2 — Comparison slider</div>
   <div class="sec-h">Drag ← → to compare blur vs full image</div>
-  <p class="sec-sub">Left = blur placeholder (0 ms, ~400 bytes). Right = full WebP image after loading.</p>
+  <p class="sec-sub">Left = blur placeholder (0 ms, ~400 bytes). Right = full WebP after loading.</p>
   <div class="cmp-outer">
     <div class="cmp-wrap" id="cmpWrap">
       <span class="ct l"><i class="fa-solid fa-clock"></i> Blur — 0 ms</span>
       <span class="ct r"><i class="fa-solid fa-check"></i> Full WebP</span>
-      <img class="ci-base" src="https://picsum.photos/seed/prop-hero/1200/675" alt="">
-      <img class="ci-top"  id="cmpTop" src="https://picsum.photos/seed/prop-hero/1200/675" alt="">
+      <img class="ci-base" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=85&auto=format&fit=crop" alt="">
+      <img class="ci-top" id="cmpTop" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=85&auto=format&fit=crop" alt="">
       <div class="ch" id="cmpHandle" style="left:50%">
         <div class="ck"><i class="fa-solid fa-chevron-left" style="font-size:.65rem"></i><i class="fa-solid fa-chevron-right" style="font-size:.65rem"></i></div>
       </div>
     </div>
   </div>
-  <p class="cmp-hint" style="margin-top:.6rem"><i class="fa-solid fa-hand-pointer"></i> &nbsp;Drag anywhere · the blurred version is what users see while the full image downloads in the background</p>
+  <p class="cmp-hint" style="margin-top:.6rem"><i class="fa-solid fa-hand-pointer"></i> &nbsp;Drag anywhere on the image</p>
 </div>
 <div class="divider"></div>
 
-<!-- PIPELINE -->
+<!-- ══ PIPELINE ══ -->
 <div class="sec" id="pipeline">
-  <div class="sec-lbl"><i class="fa-solid fa-diagram-project"></i> Demo 3 of 4 — Backend pipeline</div>
-  <div class="sec-h">Watch the server process an image</div>
-  <p class="sec-sub">Click "Process Image" to watch the Node.js + sharp pipeline run step by step.</p>
+  <div class="sec-lbl"><i class="fa-solid fa-diagram-project"></i> Demo 3 — Backend pipeline</div>
+  <div class="sec-h">Watch the Node.js server process an image</div>
+  <p class="sec-sub">Press the button and watch the sharp pipeline run step by step.</p>
   <div style="display:flex;gap:.6rem;align-items:center;margin-bottom:1.4rem;flex-wrap:wrap">
     <button class="btn btn-prim btn-lg" id="pipeBtn" onclick="runPipeline()"><i class="fa-solid fa-play"></i> Process Image</button>
     <button class="btn btn-ghost btn-sm" id="pipeReset" onclick="resetPipeline()" style="display:none"><i class="fa-solid fa-rotate-left"></i> Reset</button>
@@ -387,44 +381,28 @@ footer a{color:var(--ac)}
       <div class="ps" id="ps4"><div class="pi" style="background:rgba(34,197,94,.11)"><i class="fa-solid fa-mobile-screen" style="color:var(--green)"></i></div><div class="pt"><strong>mobile.webp</strong><span>800px wide · 80% quality</span></div><div class="pck"><i class="fa-solid fa-check"></i></div></div>
       <div class="ps" id="ps5"><div class="pi" style="background:rgba(249,115,22,.11)"><i class="fa-solid fa-desktop" style="color:#fb923c"></i></div><div class="pt"><strong>desktop.webp</strong><span>1920px wide · 85% quality</span></div><div class="pck"><i class="fa-solid fa-check"></i></div></div>
     </div>
-    <div class="pout" id="pout"><i class="fa-solid fa-play"></i><span>Press "Process Image"<br>to see the result</span></div>
+    <div class="pout" id="pout"><i class="fa-solid fa-play big"></i><span>Press "Process Image"<br>to see the result</span></div>
   </div>
 </div>
 <div class="divider"></div>
 
-<!-- RACE -->
+<!-- ══ RACE ══ -->
 <div class="sec" id="race">
-  <div class="sec-lbl"><i class="fa-solid fa-flag-checkered"></i> Demo 4 of 4 — Speed race</div>
-  <div class="sec-h">Loading without vs with the toolkit</div>
-  <p class="sec-sub">Both start at the same moment. See what a real user experiences on a typical mobile connection (10 Mbps).</p>
+  <div class="sec-lbl"><i class="fa-solid fa-flag-checkered"></i> Demo 4 — Speed race</div>
+  <div class="sec-h">0.3 s vs 4.5 s — press Start</div>
+  <p class="sec-sub">Both images start loading at the same moment on a 10 Mbps mobile connection.</p>
   <div class="race-card">
     <div class="rrow">
-      <div class="rmeta">
-        <span class="rname" style="color:var(--red)"><i class="fa-solid fa-xmark"></i> Without toolkit — 8.2 MB JPEG</span>
-        <span class="rtime" id="badT" style="color:var(--red)">0.00 s</span>
-      </div>
-      <div class="track">
-        <div class="rbar" id="badBar" style="background:linear-gradient(90deg,rgba(239,68,68,.45),rgba(239,68,68,.7))">
-          <img class="rthumb" id="badThumb" src="https://picsum.photos/seed/prop-hero/60/40" alt="">
-        </div>
-        <span class="rfin" id="badFin" style="color:var(--red)">4.5 s — blank screen the whole time 🐌</span>
-      </div>
+      <div class="rmeta"><span class="rname" style="color:var(--red)"><i class="fa-solid fa-xmark"></i> Without toolkit — 8.2 MB JPEG</span><span class="rtime" id="badT" style="color:var(--red)">0.00 s</span></div>
+      <div class="track"><div class="rbar" id="badBar" style="background:linear-gradient(90deg,rgba(239,68,68,.45),rgba(239,68,68,.7))"><img class="rthumb" id="badThumb" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=60&q=60&auto=format&fit=crop" alt=""></div><span class="rfin" id="badFin" style="color:var(--red)">4.5 s — blank screen 🐌</span></div>
     </div>
     <div class="rrow">
-      <div class="rmeta">
-        <span class="rname" style="color:var(--green)"><i class="fa-solid fa-check"></i> With toolkit — WebP 42 KB + blur placeholder</span>
-        <span class="rtime" id="goodT" style="color:var(--green)">0.00 s</span>
-      </div>
-      <div class="track">
-        <div class="rbar" id="goodBar" style="background:linear-gradient(90deg,rgba(34,197,94,.45),rgba(34,197,94,.7))">
-          <img class="rthumb" id="goodThumb" src="https://picsum.photos/seed/prop-hero/60/40" alt="">
-        </div>
-        <span class="rfin" id="goodFin" style="color:var(--green)">0.3 s — full image! ⚡</span>
-      </div>
+      <div class="rmeta"><span class="rname" style="color:var(--green)"><i class="fa-solid fa-check"></i> With toolkit — WebP 42 KB + blur placeholder</span><span class="rtime" id="goodT" style="color:var(--green)">0.00 s</span></div>
+      <div class="track"><div class="rbar" id="goodBar" style="background:linear-gradient(90deg,rgba(34,197,94,.45),rgba(34,197,94,.7))"><img class="rthumb" id="goodThumb" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=60&q=60&auto=format&fit=crop" alt=""></div><span class="rfin" id="goodFin" style="color:var(--green)">0.3 s — full image! ⚡</span></div>
     </div>
     <div class="rleg">
-      <span class="rl"><span class="rldot" style="background:var(--red)"></span>User stares at a blank box for 4.5 seconds</span>
-      <span class="rl"><span class="rldot" style="background:var(--green)"></span>Blur placeholder at 0 ms, full image at 0.3 s</span>
+      <span class="rl"><span class="rldot" style="background:var(--red)"></span>Blank screen for 4.5 seconds</span>
+      <span class="rl"><span class="rldot" style="background:var(--green)"></span>Blur at 0 ms, full image at 0.3 s</span>
     </div>
     <div class="rbtns">
       <button class="btn btn-prim btn-lg" id="raceBtn" onclick="runRace()"><i class="fa-solid fa-flag"></i> Start Race</button>
@@ -434,193 +412,210 @@ footer a{color:var(--ac)}
 </div>
 <div class="divider"></div>
 
-<!-- GALLERY -->
+<!-- ══ GALLERY ══ -->
 <div class="sec" id="gallery">
-  <div class="sec-lbl"><i class="fa-solid fa-images"></i> Gallery — Lazy loading demo</div>
-  <div class="sec-h">Click any property card to load</div>
-  <p class="sec-sub">Each card shows the blur placeholder first. Click to trigger loading — watch the blur cross-fade into the full image. In production, this fires automatically when the card enters the viewport.</p>
+  <div class="sec-lbl"><i class="fa-solid fa-images"></i> Demo 5 — Property gallery</div>
+  <div class="sec-h">Click any card to load — or load all at once</div>
+  <p class="sec-sub">Each card starts with the blur placeholder. Click ▶ to load a single image, or use "Load All" to trigger them all. Loaded images open fullscreen when clicked.</p>
+  <div class="gal-toolbar">
+    <div class="gal-counter">Loaded: <span id="galCount">0</span> / 8</div>
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+      <button class="btn btn-ghost btn-sm" onclick="loadAll()" id="loadAllBtn"><i class="fa-solid fa-layer-group"></i> Load All Properties</button>
+      <button class="btn btn-ghost btn-sm" onclick="resetGallery()" id="resetGalBtn" style="display:none"><i class="fa-solid fa-rotate-left"></i> Reset Gallery</button>
+    </div>
+  </div>
   <div class="g-grid" id="gGrid"></div>
 </div>
 <div class="divider"></div>
 
-<!-- FEATURES -->
+<!-- ══ FEATURES ══ -->
 <div class="sec">
   <div class="sec-lbl"><i class="fa-solid fa-cubes"></i> What's in the toolkit</div>
-  <div class="sec-h">Every feature you need</div>
-  <p class="sec-sub">Production-ready out of the box. <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" style="color:var(--ac)">Read the full docs on GitHub →</a></p>
+  <div class="sec-h">Everything you need</div>
+  <p class="sec-sub">Production-ready out of the box. <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" style="color:var(--ac)">Full docs on GitHub →</a></p>
   <div class="feats">
-    <div class="feat"><div class="fi" style="background:rgba(91,110,245,.13)"><i class="fa-solid fa-bolt" style="color:var(--ac)"></i></div><h4>WebP conversion</h4><p>30–50% smaller than JPEG. Sharp handles encoding with optimal settings.</p></div>
-    <div class="feat"><div class="fi" style="background:rgba(34,197,94,.11)"><i class="fa-solid fa-layer-group" style="color:var(--green)"></i></div><h4>3 size variants</h4><p>Thumbnail 400px · Mobile 800px · Desktop 1920px — all in parallel.</p></div>
-    <div class="feat"><div class="fi" style="background:rgba(139,92,246,.12)"><i class="fa-solid fa-eye-slash" style="color:#a78bfa"></i></div><h4>Blur placeholder</h4><p>~400 byte Base64 WebP. Instant visual feedback — zero extra request.</p></div>
-    <div class="feat"><div class="fi" style="background:rgba(245,158,11,.11)"><i class="fa-solid fa-mobile-screen" style="color:var(--amber)"></i></div><h4>Responsive srcset</h4><p>Browser picks the right resolution automatically per device.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(91,110,245,.13)"><i class="fa-solid fa-bolt" style="color:var(--ac)"></i></div><h4>WebP conversion</h4><p>30–50% smaller than JPEG at equivalent quality.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(34,197,94,.11)"><i class="fa-solid fa-layer-group" style="color:var(--green)"></i></div><h4>3 size variants</h4><p>Thumbnail 400px · Mobile 800px · Desktop 1920px in parallel.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(139,92,246,.12)"><i class="fa-solid fa-eye-slash" style="color:#a78bfa"></i></div><h4>Blur placeholder</h4><p>~400 byte Base64 WebP shown instantly — zero extra request.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(245,158,11,.11)"><i class="fa-solid fa-mobile-screen" style="color:var(--amber)"></i></div><h4>Responsive srcset</h4><p>Browser picks the right resolution per device automatically.</p></div>
     <div class="feat"><div class="fi" style="background:rgba(239,68,68,.11)"><i class="fa-solid fa-eye-slash" style="color:var(--red)"></i></div><h4>Lazy loading</h4><p>IntersectionObserver — off-screen images are never downloaded.</p></div>
-    <div class="feat"><div class="fi" style="background:rgba(6,182,212,.11)"><i class="fa-solid fa-rotate" style="color:var(--cyan)"></i></div><h4>EXIF auto-rotate</h4><p>Sideways phone photos fixed before processing — automatically.</p></div>
-    <div class="feat"><div class="fi" style="background:rgba(249,115,22,.11)"><i class="fa-solid fa-shield-halved" style="color:#fb923c"></i></div><h4>Input validation</h4><p>MIME whitelist + 50 MB cap. Bad files rejected before any bytes are read.</p></div>
-    <div class="feat"><div class="fi" style="background:rgba(91,110,245,.13)"><i class="fa-brands fa-js" style="color:var(--ac)"></i></div><h4>Full TypeScript</h4><p>Every type exported. Frontend interfaces mirror backend JSDoc exactly.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(6,182,212,.11)"><i class="fa-solid fa-rotate" style="color:var(--cyan)"></i></div><h4>EXIF auto-rotate</h4><p>Sideways phone photos corrected automatically before processing.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(249,115,22,.11)"><i class="fa-solid fa-shield-halved" style="color:#fb923c"></i></div><h4>Input validation</h4><p>MIME whitelist + 50 MB cap — bad files rejected early.</p></div>
+    <div class="feat"><div class="fi" style="background:rgba(91,110,245,.13)"><i class="fa-brands fa-js" style="color:var(--ac)"></i></div><h4>Full TypeScript</h4><p>Every type exported. Frontend interfaces mirror backend types.</p></div>
   </div>
 </div>
 <div class="divider"></div>
 
-<!-- CODE -->
+<!-- ══ CODE ══ -->
 <div class="sec">
-  <div class="sec-lbl"><i class="fa-solid fa-terminal"></i> Quick start</div>
-  <div class="sec-h">Up and running in 3 commands</div>
-  <p class="sec-sub">Full documentation and installation guide on <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" style="color:var(--ac)">GitHub →</a></p>
+  <div class="sec-lbl"><i class="fa-solid fa-terminal"></i> Get started</div>
+  <div class="sec-h">3 commands to run it</div>
   <div class="cw">
     <div class="ch2"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#febc2e"></div><div class="dot" style="background:#28c840"></div><span style="margin-left:.45rem">Terminal</span></div>
     <pre><span class="cm"># Clone and install</span>
 <span class="fn">git</span> clone https://github.com/The-Real-Bedo/fast-property-image-toolkit.git
 <span class="fn">cd</span> fast-property-image-toolkit && <span class="fn">npm</span> install
-
 <span class="fn">cp</span> packages/backend/.env.example packages/backend/.env
-<span class="fn">npm</span> run dev:backend
-<span class="cm"># → http://localhost:4000/api/images/process ✅</span></pre>
+<span class="fn">npm</span> run dev:backend  <span class="cm"># → localhost:4000 ✅</span></pre>
   </div>
   <div class="cw">
     <div class="ch2"><div class="dot" style="background:#ff5f57"></div><div class="dot" style="background:#febc2e"></div><div class="dot" style="background:#28c840"></div><span style="margin-left:.45rem">React</span></div>
     <pre><span class="kw">import</span> { <span class="fn">PropertyImage</span> } <span class="kw">from</span> <span class="st">'./components/PropertyImage'</span>;
-
-<span class="kw">function</span> <span class="fn">PropertyCard</span>({ property }) {
-  <span class="kw">return</span> &lt;<span class="fn">PropertyImage</span> data={property.image} alt={property.title} aspectRatio=<span class="st">"3/2"</span> /&gt;;
-}</pre>
+&lt;<span class="fn">PropertyImage</span> data={property.image} alt={property.title} aspectRatio=<span class="st">"3/2"</span> /&gt;</pre>
   </div>
-
   <div class="bottom-cta">
     <h2>Ready to use it in your project?</h2>
-    <p>The full source code — Node.js backend, React component, TypeScript types, and documentation — is free and open source on GitHub.</p>
-    <div class="bottom-cta-btns">
-      <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-prim btn-lg" target="_blank"><i class="fa-brands fa-github"></i> View Source on GitHub</a>
+    <p>Free and open source. Full Node.js backend, React TypeScript component, and documentation.</p>
+    <div class="bca-btns">
+      <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" class="btn btn-prim btn-lg" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
       <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit/archive/refs/heads/main.zip" class="btn btn-ghost btn-lg" target="_blank"><i class="fa-solid fa-download"></i> Download ZIP</a>
     </div>
   </div>
 </div>
 
 <footer>
-  <div class="fl2">
+  <div class="fl">
     <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
     <a href="https://sharp.pixelplumbing.com" target="_blank">sharp</a>
     <a href="https://expressjs.com" target="_blank">Express</a>
     <a href="https://react.dev" target="_blank">React</a>
-    <a href="https://www.typescriptlang.org" target="_blank">TypeScript</a>
   </div>
-  <p>MIT License · <a href="https://github.com/The-Real-Bedo" target="_blank">The-Real-Bedo</a> · This page is a demo — source code is on GitHub</p>
-  <p style="margin-top:.3rem;font-size:.71rem;color:var(--tx3)"><i class="fa-solid fa-lock"></i> Photos processed entirely in your browser — nothing is sent to any server</p>
+  <p>MIT License · <a href="https://github.com/The-Real-Bedo" target="_blank">The-Real-Bedo</a> · Demo only — source on GitHub</p>
+  <p style="margin-top:.3rem;font-size:.71rem;color:var(--tx3)"><i class="fa-solid fa-lock"></i> Photos processed in your browser only — nothing sent to any server</p>
 </footer>
 
 <script>
-/* ── UPLOAD ─────────────────────────────────────────────────────────── */
+/* ════════════════════════════════════════════
+   UPLOAD — MULTIPLE FILES
+════════════════════════════════════════════ */
 const zone  = document.getElementById('uploadZone');
 const input = document.getElementById('fileInput');
-const proc  = document.getElementById('upProc');
-const res   = document.getElementById('upResult');
-let blurSrc = '', fullSrc = '', blurPlaying = false;
+let uploadedCards = [];
 
 zone.addEventListener('click', () => input.click());
-input.addEventListener('change', e => e.target.files[0] && handleFile(e.target.files[0]));
+input.addEventListener('change', e => e.target.files.length && handleFiles([...e.target.files]));
 zone.addEventListener('dragover',  e => { e.preventDefault(); zone.classList.add('drag'); });
 zone.addEventListener('dragleave', () => zone.classList.remove('drag'));
 zone.addEventListener('drop', e => {
   e.preventDefault(); zone.classList.remove('drag');
-  const f = e.dataTransfer.files[0];
-  if (f && f.type.startsWith('image/')) handleFile(f);
-  else alert('Please drop an image file (JPEG, PNG, WebP, AVIF)');
+  const files = [...e.dataTransfer.files].filter(f => f.type.startsWith('image/'));
+  if (files.length) handleFiles(files);
+  else alert('Please drop image files (JPEG, PNG, WebP, AVIF)');
 });
 
-function fmtBytes(b) {
-  return b < 1024 ? b + ' B' : b < 1048576 ? (b/1024).toFixed(1) + ' KB' : (b/1048576).toFixed(2) + ' MB';
-}
+function fmtB(b){ return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'; }
 
-function handleFile(file) {
-  if (file.size > 52428800) { alert('File too large (max 50 MB)'); return; }
+function handleFiles(files) {
   zone.style.display = 'none';
-  proc.classList.add('show');
-  const delays = [0, 350, 700, 1050, 1380, 1700];
-  const durs   = [280, 280, 500, 580, 580, 580];
-  delays.forEach((d, i) => {
-    setTimeout(() => {
-      document.getElementById('cl'+i).classList.add('act');
-      setTimeout(() => {
-        document.getElementById('cl'+i).classList.remove('act');
-        document.getElementById('cl'+i).classList.add('done');
-        if (i === 5) {
-          const r = new FileReader();
-          r.onload = e => { fullSrc = e.target.result; buildResult(file, fullSrc); };
-          r.readAsDataURL(file);
-        }
-      }, durs[i]);
-    }, d);
+  const qWrap = document.getElementById('queueWrap');
+  qWrap.style.display = 'block';
+  const queue = document.getElementById('queue');
+  queue.innerHTML = '';
+
+  files.forEach((f, i) => {
+    queue.innerHTML += `<div class="qi" id="qi${i}">
+      <i class="fa-solid fa-clock" style="color:var(--tx3)"></i>
+      <span class="qi-name">${f.name}</span>
+      <span class="qi-sz">${fmtB(f.size)}</span>
+    </div>`;
   });
+
+  let idx = 0;
+  function processNext() {
+    if (idx >= files.length) {
+      setTimeout(() => { qWrap.style.display='none'; document.getElementById('upActions').style.display='flex'; }, 500);
+      return;
+    }
+    const f = files[idx];
+    const qi = document.getElementById('qi'+idx);
+    qi.classList.add('act');
+    qi.querySelector('i').className = 'fa-solid fa-gear spin';
+
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        processImage(f, img, e.target.result, idx);
+        qi.classList.remove('act');
+        qi.classList.add('done');
+        qi.querySelector('i').className = 'fa-solid fa-check';
+        idx++;
+        setTimeout(processNext, 200);
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(f);
+  }
+  processNext();
 }
 
-function buildResult(file, src) {
-  const img = new Image();
-  img.onload = () => {
-    proc.classList.remove('show');
-    res.classList.add('show');
-    const c = document.createElement('canvas');
-    const ar = img.naturalHeight / img.naturalWidth;
-    c.width = 20; c.height = Math.max(1, Math.round(20 * ar));
-    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
-    blurSrc = c.toDataURL('image/jpeg', 0.35);
+function processImage(file, img, src, idx) {
+  const c = document.createElement('canvas');
+  const ar = img.naturalHeight / img.naturalWidth;
+  c.width = 20; c.height = Math.max(1, Math.round(20 * ar));
+  c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+  const blurSrc = c.toDataURL('image/jpeg', 0.35);
 
-    document.getElementById('upBlur').src = blurSrc;
-    document.getElementById('upFull').src = src;
-    document.getElementById('upMeta').textContent =
-      img.naturalWidth + ' × ' + img.naturalHeight + ' px · ' + fmtBytes(file.size) + ' · ' + file.type;
+  const orig = file.size;
+  const bl   = Math.round(blurSrc.length * 0.75);
+  const th   = Math.round(orig * 0.018);
+  const mo   = Math.round(orig * 0.055);
+  const save = Math.round((1 - mo/orig) * 100);
 
-    playBlur();
+  const cardId = 'upc' + idx;
+  uploadedCards.push({ id: cardId, blurSrc, fullSrc: src, title: file.name });
+  const grid = document.getElementById('upGrid');
+  const div = document.createElement('div');
+  div.className = 'up-card';
+  div.id = cardId;
+  div.innerHTML = `
+    <button class="up-rm" onclick="removeUpCard('${cardId}')"><i class="fa-solid fa-xmark"></i></button>
+    <div class="up-card-img" onclick="replayUpCard('${cardId}')">
+      <img class="ubl" id="${cardId}-bl" src="${blurSrc}" alt="" aria-hidden="true">
+      <img class="ufl" id="${cardId}-fl" src="${src}" alt="${file.name}">
+      <button class="up-replay"><i class="fa-solid fa-rotate-right"></i> Replay</button>
+    </div>
+    <div class="up-card-body">
+      <div class="up-fn">${file.name}</div>
+      <div class="up-bars">
+        <div class="up-br"><span class="up-bl2">Original</span><div class="up-bg"><div class="up-bf" id="${cardId}-b1" style="background:var(--red)"></div></div><span class="up-bv" id="${cardId}-v1" style="color:var(--red)">${fmtB(orig)}</span></div>
+        <div class="up-br"><span class="up-bl2">Mobile WebP</span><div class="up-bg"><div class="up-bf" id="${cardId}-b2" style="background:var(--green)"></div></div><span class="up-bv" id="${cardId}-v2" style="color:var(--green)">${fmtB(mo)}</span></div>
+      </div>
+      <div class="up-save"><i class="fa-solid fa-circle-arrow-down"></i> ${save}% smaller · Blur: ${fmtB(bl)}</div>
+    </div>`;
+  grid.appendChild(div);
 
-    const orig = file.size;
-    const bl   = Math.round(blurSrc.length * 0.75);
-    const th   = Math.round(orig * 0.018);
-    const mo   = Math.round(orig * 0.055);
-    const de   = Math.round(orig * 0.22);
-
-    setTimeout(() => {
-      const bars = [['b-or','v-or',orig,orig,'var(--red)'],['b-bl','v-bl',bl,orig,'#8b5cf6'],
-        ['b-th','v-th',th,orig,'var(--cyan)'],['b-mo','v-mo',mo,orig,'var(--ac)'],['b-de','v-de',de,orig,'var(--green)']];
-      bars.forEach(([bi,vi,sz,mx,cl]) => {
-        const el = document.getElementById(bi);
-        el.style.transition = 'width 1.2s cubic-bezier(.16,1,.3,1)';
-        el.style.width = Math.max(0.4, sz/mx*100) + '%';
-        document.getElementById(vi).textContent = fmtBytes(sz);
-      });
-      const st = document.getElementById('saveTag');
-      st.style.display = 'inline-flex';
-      document.getElementById('saveText').textContent =
-        'Mobile WebP ~' + Math.round((1-mo/orig)*100) + '% smaller than original!';
-    }, 200);
-
-    const id = 'a' + Math.random().toString(36).slice(2,10);
-    document.getElementById('jbox').innerHTML =
-      `<span class="jk">"id"</span>: <span class="js">"${id}-..."</span>,\n<span class="jk">"blurDataUrl"</span>: <span class="js">"data:image/webp;base64,UklGR... (~${fmtBytes(bl)})"</span>,\n<span class="jk">"sizes"</span>: {\n  <span class="jk">"thumbnail"</span>: { <span class="jk">"url"</span>: <span class="js">"cdn.example.com/${id}-thumbnail.webp"</span>, <span class="jk">"width"</span>: <span class="jn">400</span>, <span class="jk">"bytes"</span>: <span class="jn">${th}</span> },\n  <span class="jk">"mobile"</span>:    { <span class="jk">"url"</span>: <span class="js">"cdn.example.com/${id}-mobile.webp"</span>,    <span class="jk">"width"</span>: <span class="jn">800</span>, <span class="jk">"bytes"</span>: <span class="jn">${mo}</span>  },\n  <span class="jk">"desktop"</span>:   { <span class="jk">"url"</span>: <span class="js">"cdn.example.com/${id}-desktop.webp"</span>,   <span class="jk">"width"</span>: <span class="jn">1920</span>, <span class="jk">"bytes"</span>: <span class="jn">${de}</span> }\n},\n<span class="jk">"original"</span>: { <span class="jk">"width"</span>: <span class="jn">${img.naturalWidth}</span>, <span class="jk">"height"</span>: <span class="jn">${img.naturalHeight}</span>, <span class="jk">"format"</span>: <span class="js">"${file.type.split('/')[1]}"</span> },\n<span class="jk">"createdAt"</span>: <span class="js">"${new Date().toISOString()}"</span>`;
-  };
-  img.src = src;
-}
-
-function playBlur() {
-  if (blurPlaying) return;
-  blurPlaying = true;
-  const b = document.getElementById('upBlur'), f = document.getElementById('upFull');
-  const h = document.getElementById('upHint');
-  h.textContent = '⏳ Loading full image…';
-  b.classList.remove('off'); f.classList.remove('on');
   setTimeout(() => {
-    f.classList.add('on'); b.classList.add('off');
-    h.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> Click to replay';
-    blurPlaying = false;
-  }, 1500);
+    const b1 = document.getElementById(cardId+'-b1');
+    const b2 = document.getElementById(cardId+'-b2');
+    if (b1) { b1.style.transition='width 1s ease'; b1.style.width='100%'; }
+    if (b2) { b2.style.transition='width 1s ease'; b2.style.width = Math.max(0.5, mo/orig*100)+'%'; }
+    playUpCard(cardId);
+  }, 150);
 }
-function replayBlur() { if (!blurPlaying) playBlur(); }
+
+function playUpCard(id) {
+  const bl = document.getElementById(id+'-bl');
+  const fl = document.getElementById(id+'-fl');
+  if (!bl || !fl) return;
+  bl.classList.remove('off'); fl.classList.remove('on');
+  setTimeout(() => { fl.classList.add('on'); bl.classList.add('off'); }, 1400);
+}
+function replayUpCard(id) { playUpCard(id); }
+function removeUpCard(id) { const el = document.getElementById(id); if (el) el.remove(); }
 function resetUpload() {
   zone.style.display = '';
-  proc.classList.remove('show');
-  res.classList.remove('show');
-  for (let i = 0; i < 6; i++) { const el = document.getElementById('cl'+i); el.classList.remove('act','done'); }
+  document.getElementById('queueWrap').style.display = 'none';
+  document.getElementById('queue').innerHTML = '';
+  document.getElementById('upGrid').innerHTML = '';
+  document.getElementById('upActions').style.display = 'none';
   input.value = '';
+  uploadedCards = [];
 }
 
-/* ── COMPARISON SLIDER ──────────────────────────────────────────────── */
+/* ════════════════════════════════════════════
+   COMPARISON SLIDER
+════════════════════════════════════════════ */
 (function(){
   const wrap = document.getElementById('cmpWrap');
   const top  = document.getElementById('cmpTop');
@@ -632,45 +627,46 @@ function resetUpload() {
     top.style.clipPath = `inset(0 ${100-p}% 0 0)`;
     hndl.style.left    = p + '%';
   };
-  hndl.addEventListener('mousedown',  e => { drag = true; e.preventDefault(); });
-  hndl.addEventListener('touchstart', e => { drag = true; }, {passive:true});
+  hndl.addEventListener('mousedown',  e => { drag=true; e.preventDefault(); });
+  hndl.addEventListener('touchstart', e => { drag=true; }, {passive:true});
   wrap.addEventListener('click',      e => set(e.clientX));
-  document.addEventListener('mousemove', e => { if (drag) set(e.clientX); });
-  document.addEventListener('touchmove', e => { if (drag) set(e.touches[0].clientX); }, {passive:true});
-  document.addEventListener('mouseup',   () => drag = false);
-  document.addEventListener('touchend',  () => drag = false);
-  set(wrap.getBoundingClientRect().left + wrap.offsetWidth * 0.5);
+  document.addEventListener('mousemove', e => { if(drag) set(e.clientX); });
+  document.addEventListener('touchmove', e => { if(drag) set(e.touches[0].clientX); }, {passive:true});
+  document.addEventListener('mouseup',   () => drag=false);
+  document.addEventListener('touchend',  () => drag=false);
+  set(wrap.getBoundingClientRect().left + wrap.offsetWidth*.5);
 })();
 
-/* ── PIPELINE ───────────────────────────────────────────────────────── */
+/* ════════════════════════════════════════════
+   PIPELINE
+════════════════════════════════════════════ */
 let pipeRunning = false;
 function runPipeline() {
   if (pipeRunning) return;
   pipeRunning = true;
   document.getElementById('pipeBtn').disabled = true;
   document.getElementById('pipeSt').innerHTML = '<i class="fa-solid fa-gear spin"></i> Processing…';
-  const timing = [[0,340],[370,280],[660,550],[920,620],[970,620],[1020,620]];
-  timing.forEach(([d,dur],i) => {
+  [[0,340],[370,280],[660,550],[920,620],[970,620],[1020,620]].forEach(([d,dur],i) => {
     setTimeout(() => {
       document.getElementById('ps'+i).classList.add('act');
       setTimeout(() => {
         document.getElementById('ps'+i).classList.remove('act');
         document.getElementById('ps'+i).classList.add('done');
-        if (i === 5) showPipeResult();
+        if (i===5) showPipeResult();
       }, dur);
     }, d);
   });
 }
 function showPipeResult() {
   document.getElementById('pipeSt').innerHTML = '<i class="fa-solid fa-check" style="color:var(--green)"></i> Done in ~380 ms';
-  document.getElementById('pipeReset').style.display = 'inline-flex';
+  document.getElementById('pipeReset').style.display='inline-flex';
   const out = document.getElementById('pout');
   out.classList.remove('idle'); out.classList.add('live');
-  out.innerHTML = `
+  out.innerHTML=`
     <div><div class="po-lbl">🌫 Blur placeholder</div>
       <div style="display:flex;align-items:center;gap:.5rem;margin-top:.25rem">
-        <img src="https://picsum.photos/seed/prop-hero/20/11" style="width:34px;height:19px;border-radius:3px;object-fit:cover;filter:blur(3px)" alt="">
-        <span style="font-family:'Fira Code',monospace;font-size:.7rem;color:#a78bfa">data:image/webp;base64,UklGR… (~400 bytes)</span>
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=20&q=20&auto=format&fit=crop" style="width:34px;height:19px;border-radius:3px;object-fit:cover;filter:blur(3px)" alt="">
+        <span style="font-family:'Fira Code',monospace;font-size:.69rem;color:#a78bfa">data:image/webp;base64,UklGR… (~400 bytes)</span>
       </div>
     </div>
     <div><div class="po-lbl">📁 Generated WebP files</div>
@@ -682,138 +678,221 @@ function showPipeResult() {
       </div>
     </div>
     <div><div class="po-lbl">🔗 API response</div>
-      <div class="po-url" style="margin-top:.25rem">POST /api/images/process → 201 · { id, blurDataUrl, sizes: {thumbnail, mobile, desktop} }</div>
+      <div class="po-url" style="margin-top:.25rem">POST /api/images/process → 201 · { id, blurDataUrl, sizes }</div>
     </div>
-    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" class="btn btn-green btn-sm" style="margin-top:.25rem">
-      <i class="fa-brands fa-github"></i> See the source code on GitHub
-    </a>`;
-  setTimeout(() => {
-    [[1,0.13],[2,0.51],[3,2.17],[4,100]].forEach(([i,p]) => {
-      const el = document.getElementById('pf'+i);
-      if (el) { el.style.transition = 'width 1s ease'; el.style.width = p + '%'; }
-    });
-  }, 80);
+    <a href="https://github.com/The-Real-Bedo/fast-property-image-toolkit" target="_blank" class="btn btn-green btn-sm"><i class="fa-brands fa-github"></i> See source on GitHub</a>`;
+  setTimeout(()=>{[[1,.13],[2,.51],[3,2.17],[4,100]].forEach(([i,p])=>{const el=document.getElementById('pf'+i);if(el){el.style.transition='width 1s ease';el.style.width=p+'%';}});},80);
 }
 function resetPipeline() {
-  pipeRunning = false;
-  for (let i = 0; i < 6; i++) document.getElementById('ps'+i).classList.remove('act','done');
-  document.getElementById('pipeBtn').disabled = false;
-  document.getElementById('pipeReset').style.display = 'none';
-  document.getElementById('pipeSt').textContent = '';
-  const o = document.getElementById('pout'); o.classList.remove('live'); o.classList.add('idle');
-  o.innerHTML = '<i class="fa-solid fa-play"></i><span>Press "Process Image"<br>to see the result</span>';
+  pipeRunning=false;
+  for(let i=0;i<6;i++) document.getElementById('ps'+i).classList.remove('act','done');
+  document.getElementById('pipeBtn').disabled=false;
+  document.getElementById('pipeReset').style.display='none';
+  document.getElementById('pipeSt').textContent='';
+  const o=document.getElementById('pout');o.classList.remove('live');o.classList.add('idle');
+  o.innerHTML='<i class="fa-solid fa-play big"></i><span>Press "Process Image"<br>to see the result</span>';
 }
 
-/* ── RACE ───────────────────────────────────────────────────────────── */
-let raceOn = false, rTimers = [];
+/* ════════════════════════════════════════════
+   RACE
+════════════════════════════════════════════ */
+let raceOn=false, rTimers=[];
 function runRace() {
-  if (raceOn) return; raceOn = true;
-  document.getElementById('raceBtn').style.display = 'none';
-  const start = Date.now();
-  const badBar = document.getElementById('badBar'), goodBar = document.getElementById('goodBar');
-  goodBar.style.transition = 'width 320ms linear'; goodBar.style.width = '100%';
-  badBar.style.transition  = 'width 4500ms linear'; badBar.style.width  = '100%';
-  let gt = setInterval(() => {
-    const e = Date.now() - start;
-    document.getElementById('goodT').textContent = (e/1000).toFixed(2) + ' s';
-    if (e >= 320) {
-      clearInterval(gt);
-      document.getElementById('goodT').textContent = '0.32 s';
-      document.getElementById('goodThumb').style.opacity = '1';
-      document.getElementById('goodFin').style.opacity   = '1';
-    }
-  }, 16); rTimers.push(gt);
-  let bt = setInterval(() => {
-    const e = Date.now() - start;
-    document.getElementById('badT').textContent = (e/1000).toFixed(2) + ' s';
-    if (e >= 4500) {
-      clearInterval(bt);
-      document.getElementById('badT').textContent = '4.50 s';
-      document.getElementById('badThumb').style.opacity = '1';
-      document.getElementById('badFin').style.opacity   = '1';
-      document.getElementById('raceReset').style.display = 'inline-flex';
-    }
-  }, 16); rTimers.push(bt);
+  if(raceOn)return; raceOn=true;
+  document.getElementById('raceBtn').style.display='none';
+  const start=Date.now();
+  const badBar=document.getElementById('badBar'), goodBar=document.getElementById('goodBar');
+  goodBar.style.transition='width 320ms linear'; goodBar.style.width='100%';
+  badBar.style.transition='width 4500ms linear';  badBar.style.width='100%';
+  let gt=setInterval(()=>{const e=Date.now()-start;document.getElementById('goodT').textContent=(e/1000).toFixed(2)+' s';if(e>=320){clearInterval(gt);document.getElementById('goodT').textContent='0.32 s';document.getElementById('goodThumb').style.opacity='1';document.getElementById('goodFin').style.opacity='1';}},16);
+  let bt=setInterval(()=>{const e=Date.now()-start;document.getElementById('badT').textContent=(e/1000).toFixed(2)+' s';if(e>=4500){clearInterval(bt);document.getElementById('badT').textContent='4.50 s';document.getElementById('badThumb').style.opacity='1';document.getElementById('badFin').style.opacity='1';document.getElementById('raceReset').style.display='inline-flex';}},16);
+  rTimers.push(gt,bt);
 }
 function resetRace() {
-  raceOn = false; rTimers.forEach(clearInterval); rTimers = [];
-  ['badBar','goodBar'].forEach(id => { const el = document.getElementById(id); el.style.transition = 'none'; el.style.width = '0%'; });
-  document.getElementById('badT').textContent = '0.00 s';
-  document.getElementById('goodT').textContent = '0.00 s';
-  ['badThumb','goodThumb'].forEach(id => document.getElementById(id).style.opacity = '0');
-  ['badFin','goodFin'].forEach(id => document.getElementById(id).style.opacity = '0');
-  document.getElementById('raceBtn').style.display = 'inline-flex';
-  document.getElementById('raceReset').style.display = 'none';
+  raceOn=false; rTimers.forEach(clearInterval); rTimers=[];
+  ['badBar','goodBar'].forEach(id=>{const el=document.getElementById(id);el.style.transition='none';el.style.width='0%';});
+  document.getElementById('badT').textContent=document.getElementById('goodT').textContent='0.00 s';
+  ['badThumb','goodThumb','badFin','goodFin'].forEach(id=>document.getElementById(id).style.opacity='0');
+  document.getElementById('raceBtn').style.display='inline-flex';
+  document.getElementById('raceReset').style.display='none';
 }
 
-/* ── GALLERY ────────────────────────────────────────────────────────── */
+/* ════════════════════════════════════════════
+   GALLERY — Real estate Unsplash images
+════════════════════════════════════════════ */
+const BASE = 'https://images.unsplash.com/photo-';
 const PROPS = [
-  { t:'Villa Nargis, Palm Hills', l:'6th October, Giza', price:'EGP 12.5M', bed:'5 Bed', area:'450 m²', seed:'villa1' },
-  { t:'Apt 5C, Zamalek Residence', l:'Zamalek, Cairo', price:'EGP 8.2M', bed:'3 Bed', area:'220 m²', seed:'apt2' },
-  { t:'Penthouse, The Waterway', l:'New Cairo, Egypt', price:'EGP 18M', bed:'4 Bed', area:'380 m²', seed:'pent3' },
-  { t:'Duplex, Garden City', l:'Garden City, Cairo', price:'EGP 9.8M', bed:'4 Bed', area:'310 m²', seed:'dup4' },
-  { t:'Chalet A7, La Vista', l:'Ain Sokhna, Egypt', price:'EGP 4.5M', bed:'3 Bed', area:'185 m²', seed:'chalet5' },
-  { t:'Villa, Marassi North Coast', l:'North Coast, Egypt', price:'EGP 22M', bed:'6 Bed', area:'520 m²', seed:'villa6' },
-  { t:'Apartment, The Gate', l:'New Cairo, Egypt', price:'EGP 5.1M', bed:'2 Bed', area:'145 m²', seed:'apt7' },
-  { t:'Townhouse, Mivida', l:'New Cairo, Egypt', price:'EGP 11.2M', bed:'4 Bed', area:'280 m²', seed:'town8' },
+  { t:'Villa Nargis, Palm Hills',      l:'6th October, Giza',   price:'EGP 12.5M', bed:'5', area:'450',  type:'Villa',
+    id:'1564013799919-ab600027ffc6' },
+  { t:'Penthouse, The Waterway',        l:'New Cairo, Egypt',    price:'EGP 18M',   bed:'4', area:'380',  type:'Apartment',
+    id:'1560448204-e02f11c3d0e2' },
+  { t:'Apartment 5C, Zamalek Res.',     l:'Zamalek, Cairo',      price:'EGP 8.2M',  bed:'3', area:'220',  type:'Apartment',
+    id:'1512917774080-9991f1c4c750' },
+  { t:'Chalet A7, La Vista',            l:'Ain Sokhna, Egypt',   price:'EGP 4.5M',  bed:'3', area:'185',  type:'Chalet',
+    id:'1568605114967-8130f3a36994' },
+  { t:'Villa, Marassi North Coast',     l:'North Coast, Egypt',  price:'EGP 22M',   bed:'6', area:'520',  type:'Villa',
+    id:'1580587771525-4cfd2a4f48e6' },
+  { t:'Duplex Garden, Maadi',           l:'Maadi, Cairo',        price:'EGP 9.8M',  bed:'4', area:'310',  type:'Apartment',
+    id:'1583608205776-bfd35f0d9f83' },
+  { t:'Townhouse, Mivida',              l:'New Cairo, Egypt',    price:'EGP 11.2M', bed:'4', area:'280',  type:'Villa',
+    id:'1605146769289-440113cc3d00' },
+  { t:'Modern Apartment, The Gate',     l:'New Cairo, Egypt',    price:'EGP 5.1M',  bed:'2', area:'145',  type:'Apartment',
+    id:'1600607687939-ce8a6c25118c' },
 ];
 
-(function(){
+let galLoaded = 0;
+let lbImages = [], lbIdx = 0;
+
+(function buildGallery(){
   const grid = document.getElementById('gGrid');
   PROPS.forEach((p, i) => {
-    const full = `https://picsum.photos/seed/${p.seed}/800/600`;
-    const tiny = `https://picsum.photos/seed/${p.seed}/20/15`;
+    const full = `${BASE}${p.id}?w=900&q=80&auto=format&fit=crop`;
+    const tiny = `${BASE}${p.id}?w=20&q=20&auto=format&fit=crop`;
     grid.innerHTML += `
       <div class="g-card" id="gc${i}">
         <div class="g-img">
           <div class="g-sk" id="gsk${i}"></div>
           <img class="g-blur" id="gbl${i}" src="${tiny}" alt="" aria-hidden="true">
-          <img class="g-full" id="gfl${i}" src="" alt="${p.t}">
-          <div class="g-badge" id="gbd${i}"><i class="fa-solid fa-circle" style="font-size:.4rem"></i> Blur placeholder</div>
+          <img class="g-full" id="gfl${i}" src="" alt="${p.t}" onclick="openLb(${i})" style="cursor:zoom-in">
+          <div class="g-badge" id="gbd${i}"><i class="fa-solid fa-circle" style="font-size:.35rem"></i> Blur placeholder</div>
           <div class="g-load-btn" id="glb${i}" onclick="loadCard(${i})">
-            <div class="g-play"><i class="fa-solid fa-play" style="margin-left:3px"></i></div>
-            <span class="g-load-lbl">Click to load image</span>
+            <div class="g-play"><i class="fa-solid fa-play" style="margin-left:2px"></i></div>
+            <div><div class="g-load-txt">Load Image</div><div class="g-load-sub">Click to see blur → full transition</div></div>
           </div>
         </div>
         <div class="g-body">
           <div class="g-title">${p.t}</div>
           <div class="g-meta"><i class="fa-solid fa-location-dot" style="font-size:.78rem"></i>${p.l}</div>
           <div class="g-price">${p.price}</div>
-          <div class="g-tags" style="margin-top:.35rem">
-            <span class="g-tag"><i class="fa-solid fa-bed"></i> ${p.bed}</span>
-            <span class="g-tag"><i class="fa-solid fa-ruler-combined"></i> ${p.area}</span>
-            <span class="g-tag">WebP · ~42KB</span>
+          <div class="g-tags">
+            <span class="g-tag"><i class="fa-solid fa-bed"></i> ${p.bed} Bed</span>
+            <span class="g-tag"><i class="fa-solid fa-ruler-combined"></i> ${p.area} m²</span>
+            <span class="g-tag">${p.type}</span>
+            <span class="g-tag">WebP · ~42 KB</span>
           </div>
         </div>
       </div>`;
   });
+
+  lbImages = PROPS.map(p => ({
+    src: `${BASE}${p.id}?w=1400&q=90&auto=format&fit=crop`,
+    title: p.t,
+    meta: `${p.l} · ${p.price} · ${p.bed} Bed · ${p.area} m²`
+  }));
+
+  const dots = document.getElementById('lb-dots');
+  PROPS.forEach((_,i) => { dots.innerHTML += `<div class="lb-dot" id="lbd${i}" onclick="lbGo(${i});event.stopPropagation()"></div>`; });
 })();
 
 function loadCard(i) {
-  const loadBtn = document.getElementById('glb'+i);
-  if (!loadBtn) return;
-  loadBtn.style.display = 'none';
-
-  const badge = document.getElementById('gbd'+i);
-  badge.innerHTML = '<i class="fa-solid fa-spinner spin"></i> Loading WebP…';
-
-  const full = document.getElementById('gfl'+i);
-  full.src = `https://picsum.photos/seed/${PROPS[i].seed}/800/600`;
-  full.onload = () => {
-    full.classList.add('on');
-    document.getElementById('gbl'+i) && (document.getElementById('gbl'+i).style.display = 'none');
-    document.getElementById('gsk'+i) && (document.getElementById('gsk'+i).style.display = 'none');
-    document.getElementById('gbl'+i + 'blur') || document.getElementById('gbl'+i) || null;
-    const bl = document.getElementById('gbl'+i);
-    if (bl) bl.classList.add('off');
-    badge.innerHTML = '<i class="fa-solid fa-check"></i> Loaded';
-    badge.className = 'g-badge ok';
+  const lb  = document.getElementById('glb'+i);
+  const bd  = document.getElementById('gbd'+i);
+  const fl  = document.getElementById('gfl'+i);
+  if (!lb || lb.style.display === 'none') return;
+  lb.style.display = 'none';
+  bd.innerHTML = '<i class="fa-solid fa-spinner spin"></i> Loading…';
+  fl.src = `${BASE}${PROPS[i].id}?w=900&q=80&auto=format&fit=crop`;
+  fl.onload = () => {
+    fl.classList.add('on');
+    document.getElementById('gbl'+i).classList.add('off');
+    const sk = document.getElementById('gsk'+i);
+    if (sk) sk.style.display = 'none';
+    bd.innerHTML = '<i class="fa-solid fa-check"></i> Loaded · click to fullscreen';
+    bd.className = 'g-badge ok';
+    bd.onclick = e => { e.stopPropagation(); openLb(i); };
+    galLoaded++;
+    document.getElementById('galCount').textContent = galLoaded;
+    if (galLoaded === PROPS.length) document.getElementById('resetGalBtn').style.display='inline-flex';
   };
-  full.onerror = () => {
-    badge.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Error';
-    loadBtn.style.display = 'flex';
+  fl.onerror = () => {
+    bd.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Error';
+    lb.style.display = 'flex';
   };
 }
+
+function loadAll() {
+  document.getElementById('loadAllBtn').disabled = true;
+  document.getElementById('loadAllBtn').innerHTML = '<i class="fa-solid fa-spinner spin"></i> Loading all…';
+  PROPS.forEach((_, i) => setTimeout(() => loadCard(i), i * 180));
+}
+
+function resetGallery() {
+  galLoaded = 0;
+  document.getElementById('galCount').textContent = '0';
+  PROPS.forEach((_, i) => {
+    const fl  = document.getElementById('gfl'+i);
+    const bl  = document.getElementById('gbl'+i);
+    const lb  = document.getElementById('glb'+i);
+    const bd  = document.getElementById('gbd'+i);
+    const sk  = document.getElementById('gsk'+i);
+    if (fl)  { fl.src=''; fl.classList.remove('on'); }
+    if (bl)  { bl.classList.remove('off'); }
+    if (lb)  { lb.style.display='flex'; }
+    if (bd)  { bd.innerHTML='<i class="fa-solid fa-circle" style="font-size:.35rem"></i> Blur placeholder'; bd.className='g-badge'; bd.onclick=null; }
+    if (sk)  { sk.style.display=''; }
+  });
+  const btn = document.getElementById('loadAllBtn');
+  btn.disabled=false; btn.innerHTML='<i class="fa-solid fa-layer-group"></i> Load All Properties';
+  document.getElementById('resetGalBtn').style.display='none';
+}
+
+/* ════════════════════════════════════════════
+   LIGHTBOX
+════════════════════════════════════════════ */
+function openLb(i) {
+  const fl = document.getElementById('gfl'+i);
+  if (!fl || !fl.classList.contains('on')) return;
+  lbIdx = i;
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lb-img').src = lbImages[i].src;
+  document.getElementById('lb-title').textContent = lbImages[i].title;
+  document.getElementById('lb-meta').innerHTML = lbImages[i].meta;
+  lb.classList.add('open');
+  updateLbDots();
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLb() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function lbStep(dir) {
+  const loadedIndices = PROPS.map((_,i)=>i).filter(i=>{const fl=document.getElementById('gfl'+i);return fl&&fl.classList.contains('on');});
+  if (loadedIndices.length < 2) return;
+  const cur = loadedIndices.indexOf(lbIdx);
+  const next = loadedIndices[(cur + dir + loadedIndices.length) % loadedIndices.length];
+  lbGo(next);
+}
+
+function lbGo(i) {
+  const fl = document.getElementById('gfl'+i);
+  if (!fl || !fl.classList.contains('on')) return;
+  lbIdx = i;
+  const img = document.getElementById('lb-img');
+  img.style.opacity = '0';
+  setTimeout(() => {
+    img.src = lbImages[i].src;
+    document.getElementById('lb-title').textContent = lbImages[i].title;
+    document.getElementById('lb-meta').innerHTML = lbImages[i].meta;
+    img.style.opacity = '1';
+    updateLbDots();
+  }, 150);
+}
+
+function updateLbDots() {
+  PROPS.forEach((_,i)=>{ const d=document.getElementById('lbd'+i); if(d){d.classList.toggle('on',i===lbIdx);} });
+}
+
+function handleLbClick(e) { if(e.target===document.getElementById('lightbox'))closeLb(); }
+
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('open')) return;
+  if (e.key==='Escape') closeLb();
+  if (e.key==='ArrowRight') lbStep(1);
+  if (e.key==='ArrowLeft')  lbStep(-1);
+});
 </script>
 </body>
 </html>
